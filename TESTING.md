@@ -6,6 +6,10 @@
 *This confirmed allauth was working as the login system redirected back to the login redirect url of '/succcess' in settings.py. 
 *I then reset the login redirect url to '/' once allauth was verified.
 
+*Testing the home app.
+*To verify that the index template was extending the base template and that Bootstrap was also working, I added a heading with some basic Bootstrap classes to a content block in index.html.
+*After creating a view to return the index page, adding the url's, importing the correct settings and wiring up the template directories, I was able to verify that the home page rendered successfully in the browser with the heading and specified Bootstrap styles.
+
 
 
 
