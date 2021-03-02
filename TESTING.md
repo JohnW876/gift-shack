@@ -1,8 +1,10 @@
 **Testing During Development**
 *To test allauth was working.
-After installing allauth settings in settings.py, I temporarily changed the login redirect url to /success and ran the server in order to open the project in the browser from Gitpod.
-I then created and verified an email login manually in the django admin. I then logged out of the admin and navigated to the login page to verify if it would redirect back to a 404 page which it did.
-This confirmed allauth was working as the login system redirected back to the login redirect url of /succcess in settings.py. 
+*After installing allauth settings in settings.py, I temporarily changed the login redirect url in settings.py to '/success' and ran the server in order to open the project in the browser from Gitpod.
+*I then created and verified an email login manually in the django admin.
+*Next, I logged out of the admin and navigated to the login page and attempted to login with the previously created superuser to verify if it would redirect back to a 404 page which it did.
+*This confirmed allauth was working as the login system redirected back to the login redirect url of '/succcess' in settings.py. 
+*I then reset the login redirect url to '/' once allauth was verified.
 
 
 
