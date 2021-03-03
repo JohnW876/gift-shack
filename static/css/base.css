@@ -19,11 +19,31 @@ body {
     width: 1.5rem;
 }
 
-.main-logo-link {
+.main-logo {
     width: fit-content;
 }
 
 .btn {
     background-color: #269ccc;
     color: white;
+}
+
+.cart-head-text {
+    color: rgb(27, 26, 26);
+}
+
+.account-head-text {
+    color: rgb(27, 26, 26);
+}
+
+.fa-user-circle:before {
+    color: #269ccc;
+}
+
+.fa-shopping-cart:before {
+    color: #269ccc;
+}
+
+.logo-font {
+    color: #269ccc;
 }
