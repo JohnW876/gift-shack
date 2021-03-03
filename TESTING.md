@@ -1,16 +1,28 @@
 **Testing During Development**
-*To test allauth was working.
-*After installing allauth settings in settings.py, I temporarily changed the login redirect url in settings.py to '/success' and ran the server in order to open the project in the browser from Gitpod.
-*I then created and verified an email login manually in the django admin.
-*Next, I logged out of the admin and navigated to the login page and attempted to login with the previously created superuser to verify if it would redirect back to a 404 page which it did.
-*This confirmed allauth was working as the login system redirected back to the login redirect url of '/succcess' in settings.py. 
-*I then reset the login redirect url to '/' once allauth was verified.
 
-*Testing the home app.
-*To verify that the index template was extending the base template and that Bootstrap was also working, I added a heading with some basic Bootstrap classes to a content block in index.html.
-*After creating a view to return the index page, adding the url's, importing the correct settings and wiring up the template directories, I was able to verify that the home page rendered successfully in the browser with the heading and specified Bootstrap styles.
+**To test allauth was working.**
 
+* After installing allauth settings in settings.py, I temporarily changed the login redirect url in settings.py to '/success' and ran the server in order to open the project in the browser from Gitpod.
 
+* I then created and verified an email login manually in the django admin.
+
+* Next, I logged out of the admin and navigated to the login page and attempted to login with the previously created superuser to verify if it would redirect back to a 404 page which it did.
+
+* This confirmed allauth was working as the login system redirected back to the login redirect url of '/succcess' in settings.py. 
+
+* I then reset the login redirect url to '/' once allauth was verified.
+
+**Testing the home app.**
+
+* To verify that the index template was extending the base template and that Bootstrap was also working, I added a heading with some basic Bootstrap classes to a content block in index.html.
+
+* After creating a view to return the index page, adding the url's, importing the correct settings and wiring up the template directories, I was able to verify that the home page rendered successfully in the browser with the heading and specified Bootstrap styles.
+
+**Testing the main page header.**
+
+* After adding the the main header to base.html I ran the server and opened the browser to verify it had correctly rendered.
+
+* I verified the search bar functionality by running a test query. This successfully added a parameter to the url to verify it was working.
 
 
 **Setting up functionality for --------.**
