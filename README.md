@@ -206,7 +206,8 @@ Information regarding testing can be found in this separate [TESTING.md](https:/
 All site content was written by John Withey.
 
 ### **Media**
-All images used in this project were created by John Withey.
+All images used in this project were created by John Withey except for the homepage image which was sourced from Icons8 Team at Unsplash. 
+* [Unsplash](https://unsplash.com/)
 
 ### **Code**
 I used code from
