@@ -7,7 +7,7 @@
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% endblock %}
 
     {% block extra_meta %}
@@ -36,13 +36,56 @@
   </head>
   <body>
     <header>
+        <!--Delivery Banner-->
         <div class="container-fluid">
             <div id="delivery-banner" class="row text-center">
                 <div class="col bg-dark">
-                    <h4 class="banner my-1">Free delivery on orders over £{{ free_shipping_threshold }}!</h4>                
-                </div>            
+                    <h4 class="banner">Free delivery on orders over £{{ free_shipping_threshold }}!</h4>                
+                </div> 
+                <div class="col-12 py-lg-0 bg-white">
+                <!--My account dropdown-->
+                <ul class="account-icons list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item dropdown">
+                        <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="fas fa-user-circle fa-lg"></i></div>
+                                <p class="account-head-text my-0">My Account</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    <!--Shopping Cart-->
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                                <p class="cart-head-text my-0">
+                                    {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        £0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
+            </div> 
         </div>
+       
+        <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <a class="navbar-brand" href="{% url 'home' %}">Gift Shack</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,6 +115,7 @@
                         <a class="nav-link" href="#">Blog</a>
                     </li>
                 </ul>
+                <!--Search Form-->
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-search"></i>  Search</button>

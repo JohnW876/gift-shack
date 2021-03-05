@@ -1,16 +1,11 @@
-html {
-    height: 100%;
-}
-
 body {
     background: url('/media/home_hero_left.png') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
     color: rgb(27, 26, 26);
     font-family: 'Barlow';
 }
 
-/* from Bulma
+/* from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -18,7 +13,6 @@ body {
     height: 1.5rem;
     width: 1.5rem;
 }
-*/
 
 .btn {
     background-color: #269ccc;
@@ -42,7 +36,7 @@ body {
 }
 
 .banner {
-    color: #269ccc;
+    color: white;
 }
 
 .welcome {
@@ -51,11 +45,23 @@ body {
 }
 
 .navbar-brand {
-    font-size: 40px;
+    font-size: 30px;
     color: #269ccc!important;
-    width: fit-content;
 }
 
 .nav-link {
     font-size: 20px;
+}
+
+.account-icons{
+    margin-top: 20px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 540px) {
+  .welcome {
+    margin-top: 80px;
+    font-size: 30px;
+  }
 }
