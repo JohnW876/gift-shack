@@ -35,16 +35,16 @@
     <title>Gift Shack {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top">
+    <header>
         <div class="container-fluid">
             <div id="delivery-banner" class="row text-center">
                 <div class="col bg-dark">
-                    <h4 class="logo-font my-1">Free delivery on orders over £{{ free_shipping_threshold }}!</h4>                
+                    <h4 class="banner my-1">Free delivery on orders over £{{ free_shipping_threshold }}!</h4>                
                 </div>            
             </div>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <a class="navbar-brand" href="#">Gift Shack</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Gift Shack</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -74,7 +74,7 @@
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                    <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-search"></i>  Search</button>
                 </form>
             </div>
         </nav>    

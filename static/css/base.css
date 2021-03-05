@@ -20,10 +20,6 @@ body {
 }
 */
 
-.main-logo {
-    width: fit-content;
-}
-
 .btn {
     background-color: #269ccc;
     color: white;
@@ -45,7 +41,7 @@ body {
     color: #269ccc;
 }
 
-.logo-font {
+.banner {
     color: #269ccc;
 }
 
@@ -56,6 +52,8 @@ body {
 
 .navbar-brand {
     font-size: 40px;
+    color: #269ccc!important;
+    width: fit-content;
 }
 
 .nav-link {
