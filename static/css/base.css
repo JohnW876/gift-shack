@@ -8,10 +8,11 @@ body {
     height: 100vh;
     display:flex;
     flex-direction: column;
+    background-color: rgb(219, 217, 217);
 }
 
 .account-icons {
-    margin-top: 18px;
+    margin-top: 0px;
 }
 
 .btn {
@@ -54,7 +55,7 @@ body {
 }
 
 .browse-btn {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 
