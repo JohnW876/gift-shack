@@ -85,7 +85,7 @@
             </div> 
         </div>
         
-        <!--Navbar-->
+        <!--Navbar taken from https://getbootstrap.com/docs/4.6/components/navbar/ and modified-->
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <a class="navbar-brand" href="{% url 'home' %}">Gift Shack</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,10 +102,13 @@
                         Products
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">All Products</a>
+                        <div class="dropdown-divider"></div>   
+                        <a class="dropdown-item" href="#">Greetings Cards</a>
+                        <a class="dropdown-item" href="#">Cushions</a>
+                        <a class="dropdown-item" href="#">Tea Cups</a>
+                        <a class="dropdown-item" href="#">Coffee Mugs</a>
+                        <a class="dropdown-item" href="#">Notebooks</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -124,7 +127,7 @@
         </nav>  
     {% block content %}
     {% endblock %}
-        <!--footer start-->
+        <!--Footer start. Footer taken from https://www.ordinarycoders.com/blog/article/bootstrap-footers and mofified-->
 <footer>
     <div class="footer-wrap footer">
         <div class="container first_class">
