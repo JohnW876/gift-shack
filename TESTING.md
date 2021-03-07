@@ -24,6 +24,10 @@
 
 * I verified the search bar functionality by running a test query. This successfully added a parameter to the url to verify it was working.
 
+**Testing the product app.**
+
+* 
+
 
 **Setting up functionality for --------.**
 

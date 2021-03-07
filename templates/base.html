@@ -87,11 +87,10 @@
         
         <!--Navbar taken from https://getbootstrap.com/docs/4.6/components/navbar/ and modified-->
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <a class="navbar-brand" href="{% url 'home' %}">Gift Shack</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Gift Shack<img src="/docs/4.6/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item active">
@@ -109,6 +108,9 @@
                         <a class="dropdown-item" href="#">Tea Cups</a>
                         <a class="dropdown-item" href="#">Coffee Mugs</a>
                         <a class="dropdown-item" href="#">Notebooks</a>
+                        <div class="dropdown-divider"></div> 
+                        <a class="dropdown-item" href="#">Special Offers</a>
+
                         </div>
                     </li>
                     <li class="nav-item">
