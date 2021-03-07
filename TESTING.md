@@ -26,7 +26,8 @@
 
 **Testing the product app.**
 
-* 
+* When setting up the product models for categories and products I signed in to Django admin area to verify the category and product models were displaying correctly.
+* I manually added the product details and images to the database via the Django admin and verified the images were added to the media file in Gitpod. 
 
 
 **Setting up functionality for --------.**
