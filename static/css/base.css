@@ -8,7 +8,7 @@ body {
     height: 100vh;
     display:flex;
     flex-direction: column;
-    background-color: rgb(219, 217, 217);
+    background-color: white;
 }
 
 .account-icons {
@@ -58,6 +58,10 @@ body {
     margin-bottom: 200px;
 }
 
+.page-title {
+    font-size: 30px;
+    color: #269ccc;
+}
 
 /* Media Queries */
 

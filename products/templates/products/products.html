@@ -2,18 +2,44 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+    
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col">
-                {{ products }}
+                <div class="col text-center mt-3">
+                    <h2 class="page-title">Products</h2>
+                    <hr class="w-75 mb-1">
+                </div>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item p-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Gift Categories
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">All Gifts</a>
+                            <a class="dropdown-item" href="#">Greetings Cards</a>
+                            <a class="dropdown-item" href="#">Cushions</a>
+                            <a class="dropdown-item" href="#">Tea Cups</a>
+                            <a class="dropdown-item" href="#">Coffee Mugs</a>
+                            <a class="dropdown-item" href="#">Notebooks</a>
+                        </div>
+                    </li>
+                    <li class="nav-item p-3">
+                        <select class="custom-select">
+                        <option selected>Sort gifts by...</option>
+                        <option value="1">Price (low to high)</option>
+                        <option value="2">Price (high to low)</option>
+                        <option value="3">Rating (low to high)</option>
+                        <option value="4">Rating (high to low)</option>
+                        <option value="5">Name (A-Z)</option>
+                        <option value="6">Name (Z-A)</option>
+                        </select>
+                    </li>
+                </ul>
+                
             </div>
         </div>
     </div>
