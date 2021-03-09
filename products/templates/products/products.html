@@ -19,12 +19,12 @@
                             Gift Categories
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">All Gifts</a>
-                            <a class="dropdown-item" href="#">Greetings Cards</a>
-                            <a class="dropdown-item" href="#">Cushions</a>
-                            <a class="dropdown-item" href="#">Tea Cups</a>
-                            <a class="dropdown-item" href="#">Coffee Mugs</a>
-                            <a class="dropdown-item" href="#">Notebooks</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=greetings_cards,cushions,tea_cups,coffee_mugs,notebooks">All Gifts</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=greetings_cards">Greetings Cards</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=cushions">Cushions</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=tea_cups">Tea Cups</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=coffee_mugs">Coffee Mugs</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=notebooks">Notebooks</a>
                         </div>
                     </li>
                     <li class="nav-item p-3">
