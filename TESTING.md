@@ -31,6 +31,10 @@
 * I was able to verify that the 'products' template was being rendered correctly by using the /products url endpoint and confirming the query set of 'products' was displayed in the browser.
 * After setting up 'all products' in the template I was able to verify in the browser that all product images and data were rendering correctly. 
 
+**Testing the search form.**
+
+* After setting up the query request in the all products view, I ran a search to verify if all products with the search term 'coffee' in either the product name or description would be returned.
+* The results successfully returned both a greetings card with 'coffee' in the title and all of the coffee mug products.
 
 
 
