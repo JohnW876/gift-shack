@@ -10,18 +10,44 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid h-80">
-        <div class="row h-80">
-            <div class="col-4 offset-6 offset-md-8">
-                <h1 class="welcome">
-                    Welcome to <br>Gift Shack!
-                </h1>
-                <div class="my-3">
-                    <h4>
-                        <a href="{% url 'products' %}" class="browse-btn btn btn-dark border-0 shadow"><i class="fas fa-gift"></i>  Browse Gifts</a>
-                    </h4>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="jumbotron">
+				<h2>
+					Welcome to <br>Gift Shack!
+				</h2>
+				<p>
+					A little shop full of unique designs and original gifts.
+				</p>
+				<p>
+					<a class="btn btn-lg border-0" href="{% url 'products' %}" role="button"><i class="fas fa-gift"></i> Browse Gifts</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 carousel">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="media/art_deco_design_card.jpg" class="d-block w-50 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="media/coffee_and_steam_card.jpg" class="d-block w-50 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
                 </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-    </div>
+	</div>
+</div>
 {% endblock %}
