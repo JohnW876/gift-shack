@@ -38,7 +38,7 @@
 
 **Testing the Shopping app.**
 
-*Setting up functionality for the shopping app I was able to verify the context processor was working by checking the delivery banner was returning the correct variable on the home page.
+*When setting up the functionality for the shopping app I was able to verify the context processor was working by checking the delivery banner was returning the correct variable on the home page.
 
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
