@@ -36,9 +36,9 @@
 * After setting up the query request in the all products view, I ran a search to verify if all products with the search term 'coffee' in either the product name or description would be returned.
 * The results successfully returned both a greetings card with 'coffee' in the title and all of the coffee mug products.
 
+**Testing the Shopping app.**
 
-
-**Setting up functionality for --------.**
+*Setting up functionality for the shopping app I was able to verify the context processor was working by checking the delivery banner was returning the correct variable on the home page.
 
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
