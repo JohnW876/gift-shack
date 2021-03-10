@@ -38,7 +38,8 @@
 
 **Testing the Shopping app.**
 
-*When setting up the functionality for the shopping app I was able to verify the context processor was working by checking the delivery banner was returning the correct variable on the home page.
+* When setting up the functionality for the shopping app I was able to verify the context processor was working by checking the delivery banner was returning the correct variable on the home page.
+* In order to verify that items from a session were successfully added to the shopping bag I printed the product id and quantity details to the console via the add_to_bag view. 
 
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
