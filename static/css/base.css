@@ -52,11 +52,14 @@ body {
     font-size: 40px;
 }
 
-/* Logo text */
+/* Logo text and icon*/
 
 .navbar-brand {
     font-size: 30px;
-    color: #269ccc!important;
+}
+
+.logo-icon {
+    color: #269ccc;
 }
 
 .navbar {
