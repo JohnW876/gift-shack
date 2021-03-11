@@ -10,13 +10,13 @@
         <div class="row">
             <div class="col">
                 <div class="col text-center mt-3">
-                    <hr class="w-50 mb-1">
-                    <h2 class="page-title">Gifts</h2>
+                    <hr class="w-50 mb-4">
+                    <h2 class="page-title mb-3">Gifts</h2>
                 </div>
                 <ul class="nav justify-content-center">
                     <li class="nav-item p-3">
                         <div class="sort-select-wrapper w-100">
-                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <select id="sort-selector" class="custom-select custom-select border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                                 <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -30,7 +30,7 @@
                         </div>
                     </li>
                     <li class="nav-item p-3">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn btn-dark border-0 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Gift Categories
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
