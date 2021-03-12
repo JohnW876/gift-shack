@@ -100,6 +100,14 @@ body {
     margin-bottom: 60px;
 }
 
+/*Shopping bag */
+
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+
 /* Media Queries */
 
 @media only screen and (max-width: 540px) {
