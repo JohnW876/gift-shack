@@ -79,7 +79,7 @@
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                                 href="{% url 'view_bag' %}">
                                 <div class="text-center">
-                                    <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                                    <div><i class="fas fa-shopping-basket fa-lg"></i></div>
                                     <p class="cart-head-text my-0">
                                         {% if grand_total %}
                                         £{{ grand_total|floatformat:2 }}
