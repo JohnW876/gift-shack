@@ -96,7 +96,7 @@
                 </div>
             </div>
         </div>
-
+</header>
         <!--Navbar modified from https://getbootstrap.com/docs/4.6/components/navbar/ -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <a class="navbar-brand" href="{% url 'home' %}">Gift Shack <i class="fas fa-gift logo-icon"></i></a>
@@ -126,11 +126,15 @@
                 </form>
             </div>
         </nav>
-        {% block content %}
-        {% endblock %}
+
+    {% block content %}
+    
+    {% endblock %}
+
+    {% block page_footer %}
         <!--Footer modified from https://www.ordinarycoders.com/blog/article/bootstrap-footers -->
         <footer>
-            <div class="footer-wrap footer">
+            <div class="footer-wrap footer mt-5">
                 <div class="container first_class">
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
@@ -218,18 +222,14 @@
                 </div>
 
                 <div class="row">
-
                     <div class="container-fluid">
                         <div class="copyright"> Copyright 2021 | All Rights Reserved by Gift Shack / J Withey.</div>
                     </div>
-
                 </div>
             </div>
-
-        </footer>
-
-        <!--footer end-->
-    </header>
+    </footer>
+    <!--footer end-->
+    {% endblock %}
 
     {% if messages %}
     <div class="message-container">
