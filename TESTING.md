@@ -45,11 +45,12 @@
 
 * This was tested by changing the add_to_bag view to use each toast template (success, error, info and warning). When an item was added to the shopping bag I verified the relevant category of message was displayed correctly.
 
-**Testing Stripe.**
+**Testing Checkout and Stripe set up.**
 
 * During set up I printed the payment intent to the console to verify it was working.
 * In the browser I navigated to the checkout and filled out the form using test customer details, delivery information and test card details.
 * After submitting the form I navigated to the events section in the Stripe dashboard to verify that a new payment had been successful.
+* I also verified in the Django admin that test orders were registering and that the correct order totals and delivery costs were displayed.
 
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 

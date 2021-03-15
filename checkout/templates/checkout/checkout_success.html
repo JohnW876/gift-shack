@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="mb-4">Thank you for shopping with us!</h2>
+                <hr>
+                <p class="text-body">Here is your order information below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-7"></div>
+        </div>
+        <div class="row">
+			<div class="col-12 col-lg-7 text-right">
+				<a href="{% url 'products' %}?category=tshirts" class="btn btn-dark border-0 my-2">
+					<span class="mr-2">
+						<i class="fas fa-tshirt"></i>
+					</span>
+					<span>Check out our new T-shirt designs!</span>
+				</a>
+			</div>
+		</div>
+    </div>
+{% endblock %}
