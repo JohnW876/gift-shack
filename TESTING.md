@@ -52,6 +52,11 @@
 * After submitting the form I navigated to the events section in the Stripe dashboard to verify that a new payment had been successful.
 * I also verified in the Django admin that test orders were registering and that the correct order totals and delivery costs were displayed.
 
+**Testing Stripe Webhooks.**
+
+* I created a new endpoint in Stripe with the url from my browser. This revealed the webhook signing secret which I then exported from my workspace terminal. I restarted the server and in Stripe clicked send test webhook. This was confirmed as successful in the Stripe dashboard and also printed successfully to my console. 
+* I further tested event types in Stripe. I tested for unhandled webhook, payment intent succeeded and payment failed by sending test webhooks for those events from Stripe. Stripe confirmed the webhooks were all sent successfully.  
+
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
 ### **User Story Tests**
