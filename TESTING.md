@@ -1,27 +1,18 @@
 **Testing During Development**
 
 **To test allauth was working.**
-
 * After installing allauth settings in settings.py, I temporarily changed the login redirect url in settings.py to '/success' and ran the server in order to open the project in the browser from Gitpod.
-
 * I then created and verified an email login manually in the django admin.
-
 * Next, I logged out of the admin and navigated to the login page and attempted to login with the previously created superuser to verify if it would redirect back to a 404 page which it did.
-
 * This confirmed allauth was working as the login system redirected back to the login redirect url of '/succcess' in settings.py. 
-
 * I then reset the login redirect url to '/' once allauth was verified.
 
 **Testing the home app.**
-
 * To verify that the index template was extending the base template and that Bootstrap was also working, I added a heading with some basic Bootstrap classes to a content block in index.html.
-
 * After creating a view to return the index page, adding the url's, importing the correct settings and wiring up the template directories, I was able to verify that the home page rendered successfully in the browser with the heading and specified Bootstrap styles.
 
 **Testing the main page header.**
-
 * After adding the the main header to base.html I ran the server and opened the browser to verify it had correctly rendered.
-
 * I verified the search bar functionality by running a test query. This successfully added a parameter to the url to verify it was working.
 
 **Testing the product app.**
@@ -32,30 +23,26 @@
 * After setting up 'all products' in the template I was able to verify in the browser that all product images and data were rendering correctly. 
 
 **Testing the search form.**
-
 * After setting up the query request in the all products view, I ran a search to verify if all products with the search term 'coffee' in either the product name or description would be returned.
 * The results successfully returned both a greetings card with 'coffee' in the title and all of the coffee mug products.
 
 **Testing the Shopping app.**
-
 * When setting up the functionality for the shopping app I was able to verify the context processor was working by checking the delivery banner was returning the correct variable on the home page.
 * In order to verify that items from a session were successfully added to the shopping bag I printed the product id and quantity details to the console via the add_to_bag view. 
 
 **Testing the toasts.**
-
 * This was tested by changing the add_to_bag view to use each toast template (success, error, info and warning). When an item was added to the shopping bag I verified the relevant category of message was displayed correctly.
 
 **Testing Checkout and Stripe set up.**
-
 * During set up I printed the payment intent to the console to verify it was working.
 * In the browser I navigated to the checkout and filled out the form using test customer details, delivery information and test card details.
 * After submitting the form I navigated to the events section in the Stripe dashboard to verify that a new payment had been successful.
 * I also verified in the Django admin that test orders were registering and that the correct order totals and delivery costs were displayed.
 
 **Testing Stripe Webhooks.**
-
 * I created a new endpoint in Stripe with the url from my browser. This revealed the webhook signing secret which I then exported from my workspace terminal. I restarted the server and in Stripe clicked send test webhook. This was confirmed as successful in the Stripe dashboard and also printed successfully to my console. 
 * I further tested event types in Stripe. I tested for unhandled webhook, payment intent succeeded and payment failed by sending test webhooks for those events from Stripe. Stripe confirmed the webhooks were all sent successfully.  
+
 
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
