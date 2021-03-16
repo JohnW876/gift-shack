@@ -42,6 +42,7 @@
 **Testing Stripe Webhooks.**
 * I created a new endpoint in Stripe with the url from my browser. This revealed the webhook signing secret which I then exported from my workspace terminal. I restarted the server and in Stripe clicked send test webhook. This was confirmed as successful in the Stripe dashboard and also printed successfully to my console. 
 * I further tested event types in Stripe. I tested for unhandled webhook, payment intent succeeded and payment failed by sending test webhooks for those events from Stripe. Stripe confirmed the webhooks were all sent successfully.  
+* I printed the payment intent to the console from Stripe once I submitted an order to verify it contained the meta data, billing and shipping information. This confirmed the information was securely passed from the form to Stripe via the payment intent.
 
 
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
