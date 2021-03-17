@@ -120,6 +120,16 @@ body {
     overflow: visible;
 }
 
+/* Allauth forms */
+
+.allauth-form-inner-content input {
+    border-color: #000;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
 
 /* Media Queries */
 
