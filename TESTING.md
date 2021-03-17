@@ -44,6 +44,13 @@
 * I further tested event types in Stripe. I tested for unhandled webhook, payment intent succeeded and payment failed by sending test webhooks for those events from Stripe. Stripe confirmed the webhooks were all sent successfully.  
 * I printed the payment intent to the console from Stripe once I submitted an order to verify it contained the meta data, billing and shipping information. This confirmed the information was securely passed from the form to Stripe via the payment intent.
 
+**Testing Registration.**
+* I registered a test user account using the sign up form. The confirmation email was logged to the console in Gitpod. From this I could copy the confirmation link in part and add to the end of the running site's url. This took me to the confirmation email page so that I could log in. 
+
+**Testing Profiles.**
+* To verify the profiles app was working I successfully rendered the test username in the profile page.
+
+
 
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
