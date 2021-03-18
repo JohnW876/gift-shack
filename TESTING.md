@@ -49,6 +49,7 @@
 
 **Testing Profiles.**
 * To verify the profiles app was working I successfully rendered the test username in the profile page.
+* To verify if a user's order history would attach to their profile I completed an order with the save info box checked. Navigating to My Profile, the order history successfully displayed the order details.
 
 
 
