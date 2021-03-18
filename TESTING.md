@@ -53,6 +53,9 @@
 * To verify the user's details would prefill the form in secure checkout, I completed a new order whilst logged in as a registered user. I updated full name in the Django admin. The form on the secure checkout page successfully prefilled the form with all user details. 
 * To verify the webhook can handle checkout functionality if the checkout view fails, I commented out form.submit to simulate a broken form. I then submitted an order to verify that it would be successfully processed. This was confirmed with Stripe posting the webhook URL to the terminal. I also verified that the order was created in Django admin.
 
+**Email Confirmation**
+* A test purchase was made to verify that the confirmation email would be logged in the terminal with all of the correct order details.  
+
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
 ### **User Story Tests**
