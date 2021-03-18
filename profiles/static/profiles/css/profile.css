@@ -5,3 +5,12 @@
 .profile-form-input::placeholder {
     color: #afbcc9;
 }
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #000;
+}
+
+#id_default_country option:first-child {
+    color: #afbcc9;
+}
