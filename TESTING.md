@@ -50,7 +50,7 @@
 **Testing Profiles.**
 * To verify the profiles app was working I successfully rendered the test username in the profile page.
 * To verify if a user's order history would attach to their profile I completed an order with the save info box checked. Navigating to My Profile, the order history successfully displayed the order details.
-
+* To verify the user's details would prefill the form in secure checkout, I completed a new order whilst logged in as a registered user. I updated full name in the Django admin. The form on the secure checkout page successfully prefilled the form with all user details. 
 
 
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
