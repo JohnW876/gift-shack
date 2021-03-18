@@ -51,7 +51,7 @@
 * To verify the profiles app was working I successfully rendered the test username in the profile page.
 * To verify if a user's order history would attach to their profile I completed an order with the save info box checked. Navigating to My Profile, the order history successfully displayed the order details.
 * To verify the user's details would prefill the form in secure checkout, I completed a new order whilst logged in as a registered user. I updated full name in the Django admin. The form on the secure checkout page successfully prefilled the form with all user details. 
-
+* To verify the webhook can handle checkout functionality if the checkout view fails, I commented out form.submit to simulate a broken form. I then submitted an order to verify that it would be successfully processed. This was confirmed with Stripe posting the webhook URL to the terminal. I also verified that the order was created in Django admin.
 
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
