@@ -60,6 +60,10 @@
 * To verify if the appropriate error message would display when adding a product I submitted a form for an invalid product by adding more than 6 digits to the price. The appropriate error message displayed as expected. 
 * A valid product was added using the form in Product Management to verify if it was added to products with and without an image. The success message displayed. This was confirmed when checking the products in Django admin. 
 
+**Edit Product set up**
+* To verify if the appropriate error message would display when editing a product, I submitted an invalid update by adding more than 6 digits to the price. The appropriate error message displayed as expected.
+* A valid price was entered into the price field and submitted to verify if the success messsage would display.
+
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
 ### **User Story Tests**
