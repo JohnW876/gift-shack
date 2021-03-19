@@ -54,7 +54,11 @@
 * To verify the webhook can handle checkout functionality if the checkout view fails, I commented out form.submit to simulate a broken form. I then submitted an order to verify that it would be successfully processed. This was confirmed with Stripe posting the webhook URL to the terminal. I also verified that the order was created in Django admin.
 
 **Email Confirmation**
-* A test purchase was made to verify that the confirmation email would be logged in the terminal with all of the correct order details.  
+* A test purchase was made to verify that the confirmation email would be logged in the terminal with all of the correct order details. 
+
+**Add Product set up**
+* To verify if the appropriate error message would display when adding a product I submitted a form for an invalid product by adding more than 6 digits to the price. The appropriate error message displayed as expected. 
+* A valid product was added using the form in Product Management to verify if it was added to products with and without an image. The success message displayed. This was confirmed when checking the products in Django admin. 
 
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
