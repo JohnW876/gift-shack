@@ -64,6 +64,9 @@
 * To verify if the appropriate error message would display when editing a product, I submitted an invalid update by adding more than 6 digits to the price. The appropriate error message displayed as expected.
 * A valid price was entered into the price field and submitted to verify if the success messsage would display.
 
+**Delete Product set up**
+* A product was added via the form with valid details and if successful redirected to the product detail page with product id in the URL. Changing the URL to products/delete/id verified that the admin user would be redirected back to the products page and the correct toast message of 'product deleted' was displayed.
+
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
 ### **User Story Tests**
