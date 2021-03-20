@@ -67,6 +67,10 @@
 **Delete Product set up**
 * A product was added via the form with valid details and if successful redirected to the product detail page with product id in the URL. Changing the URL to products/delete/id verified that the admin user would be redirected back to the products page and the correct toast message of 'product deleted' was displayed.
 
+**Blog and Comments set up**
+* After navigating to the Django admin blog models, two new blog articles were added. In the browser I navigated to the site's blog page, selected the first new blog and added a comment using a test user to verify the comments would correctly display below. 
+* Navigating to the second test blog article I verified that no comments were displayed to ensure comments were working correctly and only displayed for the first test article.
+
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
 ### **User Story Tests**

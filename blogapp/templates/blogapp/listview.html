@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!--Code for blog app from https://www.askpython.com/django/django-blog-app-->
+
+{% block content %}
+<div class="container mb-5">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="mb-4">Gift Shack Blog</h2>
+            <hr>
+        </div>
+    </div>
+
+    <form method="post" class="form mb-2">
+        {%csrf_token %}
+        <H2> Search Blog Here</H2>
+        {{ form|crispy }}
+        <input type ="submit" value="Search">
+    </form>
+
+
+{% for data in dataset %}
+<h3>{{data.blog_title}}</h3>
+<a href = "{% url 'blog' _id=data.id %}">Read More</a>
+<hr/>
+{% endfor %}
+</div>
+{% endblock %}
