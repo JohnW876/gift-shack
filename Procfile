@@ -1,0 +1,1 @@
+web: gunicorn gift-shack.wsgi:application
