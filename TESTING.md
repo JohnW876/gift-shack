@@ -15,6 +15,9 @@
 * After adding the the main header to base.html I ran the server and opened the browser to verify it had correctly rendered.
 * I verified the search bar functionality by running a test query. This successfully added a parameter to the url to verify it was working.
 
+**Testing blog app**
+* I manually entered blog posts in Django admin and verified the blog app was working by rendering the posts in the browser.
+
 **Testing the product app.**
 
 * When setting up the product models for categories and products I signed in to Django admin area to verify the category and product models were displaying correctly.
