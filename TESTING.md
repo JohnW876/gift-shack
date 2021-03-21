@@ -15,11 +15,6 @@
 * After adding the the main header to base.html I ran the server and opened the browser to verify it had correctly rendered.
 * I verified the search bar functionality by running a test query. This successfully added a parameter to the url to verify it was working.
 
-**Testing blog app and comments**
-* I manually entered blog posts and comments in Django admin and verified the blog app was working by rendering the posts and comments in the browser.
-* After submitting a valid form in the comments section, I approved the comments in Django admin and verified that they displayed under their appropriate blog article in the browser.
-
-
 **Testing the product app.**
 
 * When setting up the product models for categories and products I signed in to Django admin area to verify the category and product models were displaying correctly.
@@ -72,9 +67,10 @@
 **Delete Product set up**
 * A product was added via the form with valid details and if successful redirected to the product detail page with product id in the URL. Changing the URL to products/delete/id verified that the admin user would be redirected back to the products page and the correct toast message of 'product deleted' was displayed.
 
-**Blog and Comments set up**
-* After navigating to the Django admin blog models, two new blog articles were added. In the browser I navigated to the site's blog page, selected the first new blog and added a comment using a test user to verify the comments would correctly display below. 
-* Navigating to the second test blog article I verified that no comments were displayed to ensure comments were working correctly and only displayed for the first test article.
+**Testing blog app and comments**
+* I manually entered blog posts and comments in Django admin and verified the blog app was working by rendering the posts and comments in the browser.
+* After submitting a valid form in the comments section, I approved the comments in Django admin and verified that they displayed under their appropriate blog article in the browser.
+
 
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
