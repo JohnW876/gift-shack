@@ -18,6 +18,7 @@
 **Testing blog app**
 * I manually entered blog posts in Django admin and verified the blog app was working by rendering the posts in the browser.
 
+
 **Testing the product app.**
 
 * When setting up the product models for categories and products I signed in to Django admin area to verify the category and product models were displaying correctly.
