@@ -16,7 +16,6 @@
 * I verified the search bar functionality by running a test query. This successfully added a parameter to the url to verify it was working.
 
 **Testing the product app.**
-
 * When setting up the product models for categories and products I signed in to Django admin area to verify the category and product models were displaying correctly.
 * I manually added the product details and images to the database via the Django admin and verified the images were added to the media file in Gitpod. 
 * I was able to verify that the 'products' template was being rendered correctly by using the /products url endpoint and confirming the query set of 'products' was displayed in the browser.
