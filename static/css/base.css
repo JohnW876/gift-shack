@@ -148,12 +148,12 @@ body {
 }
 
 /* Products page paginator */
+
 .pagination {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 
