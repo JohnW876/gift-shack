@@ -29,7 +29,7 @@
                 </div>
             </div>
 	
-            <div class="col-md-6 carousel mb-5">
+            <div class="col-md-6 carousel mb-5 flipInX animated" id="square">
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -54,4 +54,25 @@
             </div>
     </div>        
 </div>
+
+<!--Animated homepage carousel code from http://anicollection.github.io/#/flippers/flipInX -->
+<script type="text/javascript">
+    var element = $('#square');
+
+    // when mouseover execute the animation
+    element.mouseover(function(){
+    
+    // the animation starts
+    element.toggleClass('flipInX animated');
+    
+    // do something when animation ends
+    element.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e){
+    
+    // trick to execute the animation again
+        $(e.target).removeClass('flipInX animated');
+    
+    });
+    
+    });
+    </script>
 {% endblock %}
