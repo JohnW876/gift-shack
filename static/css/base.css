@@ -147,25 +147,52 @@ body {
     cursor: pointer;
 }
 
-/* Products page paginator */
+/* Products page paginator - code modified from https://www.w3schools.com/Css/css3_pagination.asp */
 
 .pagination {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 30px;
+    border: none;
 }
 
+.pagination a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    color: black;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #269ccc;
+    border-color: none;
+}
 
 /* Media Queries */
 
 @media only screen and (max-width: 540px) {
   .welcome {
     margin-top: 30px;
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
+/* Footer code from https://www.ordinarycoders.com/blog/article/bootstrap-footers */
 
 /* Footer Social Icons */ 
   
