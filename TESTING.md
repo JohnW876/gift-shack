@@ -72,7 +72,8 @@
 * After submitting a valid form in the comments section, I approved the comments in Django admin and verified that they displayed under their appropriate blog article in the browser.
 
 **Testing Contact form email**
-* After successfully rendering the contact template in the browser I submitted a valid form to verify if it would send the test email to the console. 
+* After successfully rendering the contact template in the browser I submitted a valid form to verify if it would send the test email to the console locally. 
+* After deployment a valid contact form was submitted from the live Heroku site to verify that it would be successfully delivered to the smtp gmail account I set up.
 
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
