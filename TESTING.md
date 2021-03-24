@@ -86,7 +86,7 @@ These user's needs are met via:
 
 Screenshots
 
-**2. As a shopper, I want to be able to view individual items for sale so that I can assess the product details prior to purchasing. (Price, product description, available images) .** 
+**2. As a shopper, I want to be able to view individual items for sale so that I can assess the product details prior to purchasing. (Price, product description, available images).** 
 
 These user's needs are met via:
 * Page/Feature
