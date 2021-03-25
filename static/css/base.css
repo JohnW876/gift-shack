@@ -20,7 +20,6 @@ body {
     color: white;
 }
 
-
 /* Account and cart text and icons on homepage */
 
 .cart-head-text {
@@ -46,9 +45,15 @@ body {
 }
 
 /* Jumbotron */
+
+.jumbotron {
+    color: black;
+}
+
 .welcome {
     margin-top: 150px;
     font-size: 40px;
+    color: #fff;
 }
 
 .browse-btn {
