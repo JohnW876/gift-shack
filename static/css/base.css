@@ -123,6 +123,11 @@ hr.btm-rule {
     border-radius: 5px;
 }
 
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: #269ccc;
+}
+
 
 /* Search form */
 .form-inline {
@@ -233,6 +238,9 @@ hr.btm-rule {
     margin-top: 30px;
     font-size: 25px;
   }
+  .banner {
+      font-size: .9rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -247,6 +255,7 @@ hr.btm-rule {
         font-size: 22px;
 
     }
+    
 }
 
 
