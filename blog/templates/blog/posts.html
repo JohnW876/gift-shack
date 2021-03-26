@@ -24,10 +24,11 @@
         <div class="col-12 mt-3 left">
             {% for post in post_list %}
             <div class="card mb-4">
+                <img class="img-responsive" src="{{ post.image.url }}" style="width:25%" alt="{{ post.title }}">
                 <div class="card-body shadow">
                     <h3 class="card-title">{{ post.title }}</h3>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{post.content|slice:":200" }}</p>
+                    <p class="card-text">{{post.content|slice:":120" }}...</p>
                     <a href="{% url 'post_detail' post.slug  %}" class="btn btn-dark border-0">Read More &rarr;</a>
                 </div>
             </div>
