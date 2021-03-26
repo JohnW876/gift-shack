@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    color: rgb(27, 26, 26);
+    color: #363837;
     font-family: 'Barlow';
     height: 100vh;
     display:flex;
@@ -38,21 +38,28 @@ body {
     color: #269ccc;
 }
 
+.account-basket {
+    margin-top: 10px!important;
+    background-color: white!important;
+}
+
 /* Delivery banner */
 
 .banner {
     color: white;
     font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
 }
 
 /* Jumbotron */
 
 .jumbotron {
-    color: black;
+    color: #363837;
 }
 .welcome-bg {
     text-align: center;
-    color: black;
+    color: #363837;
     padding: 5px;
 }
 
@@ -73,11 +80,6 @@ hr.top-rule {
 
 hr.btm-rule {
     border: 1px solid #269ccc;
-}
-
-hr.btm-nav-rule {
-    border: 2px solid #269ccc;
-    width: 95%;
 }
 
 .welcome {
@@ -106,16 +108,18 @@ hr.btm-nav-rule {
 /* Main nav */
 .navbar {
     padding: 1.5rem 2rem;
-    font-size: 25px;
+    font-size: 20px;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-}
 
 .nav-link:hover {
-    color: #269ccc!important;
+    color: black!important;
+}
+
+.main-menu {
+    color: #fff!important;
+    background-color: #269ccc;
+    border-radius: 5px;
 }
 
 
@@ -229,6 +233,14 @@ hr.btm-nav-rule {
     font-size: 25px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    background-color: white!important;
+    color: black!important;
+  }
+}
+
 
 /* Animated homepage carousel code from http://anicollection.github.io/#/flippers/flipInX */
 

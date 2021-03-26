@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-12 py-lg-0 bg-white account-icons">
                     <!--My account dropdown-->
-                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <ul class="list-inline list-unstyled text-center text-lg-right account-basket">
                         <li class="list-inline-item dropdown">
                             <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
@@ -107,16 +107,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item active">
-                    <a class="nav-link mr-2" href="{% url 'home' %}">HOME <span class="sr-only">(current)</span></a>
+                    <a class="nav-link main-menu mr-2" href="{% url 'home' %}">HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mr-2" href="{% url 'products' %}">GIFTS</a>
+                    <a class="nav-link main-menu mr-2" href="{% url 'products' %}">GIFTS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mr-2" href="{% url 'contact' %}">CONTACT</a>
+                    <a class="nav-link main-menu mr-2" href="{% url 'contact' %}">CONTACT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'posts' %}">BLOG</a>
+                    <a class="nav-link main-menu" href="{% url 'posts' %}">BLOG</a>
                 </li>
             </ul>
             <!--Search Form-->
@@ -126,7 +126,7 @@
             </form>
         </div>
     </nav>
-    <hr class="mb-5 btm-nav-rule w-90">
+    <hr class="mb-5 btm-nav-rule w-100 shadow-sm">
     {% block content %}
 
     {% endblock %}
@@ -138,7 +138,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-xs-12 about-company">
-                        <h2>SOCIAL MEDIA</h2>
+                        <h3>SOCIAL MEDIA</h3>
                         <p class="pr-5 text-white-50">Visit our social pages and get all the latest news, offers and more!</p>
                         <p> <a href="https://en-gb.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook mr-1"></i></a>
                             <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter mr-1"></i></a>
