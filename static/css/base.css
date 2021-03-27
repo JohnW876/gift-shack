@@ -112,7 +112,6 @@ hr.btm-rule {
     font-size: 20px;
 }
 
-
 .nav-link:hover {
     color: black!important;
 }
@@ -211,7 +210,7 @@ hr.btm-rule {
   text-decoration: none;
   border: none;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: 18px;
   margin: 0 4px;
 }
 
@@ -257,7 +256,6 @@ hr.btm-rule {
     }
     
 }
-
 
 
 /* Animated homepage carousel code from http://anicollection.github.io/#/flippers/flipInX */
