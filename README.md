@@ -5,7 +5,7 @@
 * Gift Shack is an e-commerce website selling gifts and homeware featuring unique patterns and designs.
 
 
-Link to website - https://poetry-cloud.herokuapp.com/get_poems
+Link to website - https://gift-shack.herokuapp.com
 
 ### User goals:
 * To be able to visit the online store and find unique and original gifts to purchase
@@ -19,7 +19,7 @@ Link to website - https://poetry-cloud.herokuapp.com/get_poems
 * To generate online sales  
 * To provide an excellent overall user experience.
 * To make it easy for the user to see and visit the areas of the website that are the most relevant to them via strong UX and UI design.
-* To act as the main showcase and home for all current and future products which can be linked to from social media and online marketplaces.
+* To act as the main showcase and home for all current and future products.
 * To build a strong, recognisable brand in the giftware market. 
 
 ## **UX**
@@ -47,46 +47,134 @@ A mobile first approach was taken to create this project with consideration of e
 | 2                            | Shopper                   | View individual items for sale                                        | Assess the products details prior to purchasing. (Price, product description, available images) |
 | 3                            | Shopper                   | View different categories of products                                 | Easily find the types of products I’m looking for                                               |
 | 4                            | Shopper                   | View a running total of my chosen products on each page               | Manage how much I spend                                                                         |
-| 5                            | Shopper                   | Easily find answers to frequently asked questions (FAQs)              | Make an informed decision when considering whether to buy or not                                |
-| 6                            | Shopper                   | Easily find useful and relevant links                                 | Visit the store's social media pages and blog pages                                             |
-| 7                            | Shopper                   | Find out about the store’s returns policy                             | Be reassured when deciding to make a purchase                                                   |
-| 8                            | Shopper                   | Contact the store owner                                               | Make customer enquiries about products, discounts, refunds, etc.                                |
-| 9                            | Buyer                     | Contact the store owner                                               | Enquire about potentially stocking products in other stores both on and offline.                |
+| 5                            | Shopper                   | Easily find useful and relevant links                                 | Visit the store's social media pages and blog pages                                             |
+| 6                            | Shopper                   | Contact the store owner                                               | Make customer enquiries about products, discounts, refunds, etc.                                |
+| 7                            | Buyer                     | Contact the store owner                                               | Enquire about potentially stocking products in other stores both on and offline.                |
 | Registration & User Accounts |                           |                                                                       |                                                                                                 |
-| 10                           | Site User                 | Register for an account easily                                        | View my personal account profile                                                                |
-| 11                           | Site User                 | Log in and logout easily                                              | Access my account and all relevant information                                                  |
-| 12                           | Site User                 | Recover my password if I forget it                                    | Regain access to my account easily                                                              |
-| 13                           | Site User                 | Receive a confirmation email after I register for an account          | Verify that I registered successfully                                                           |
-| 14                           | Site User                 | Have my own user profile                                              | See my order history and know that my payment info is saved                                     |
+| 8                            | Site User                 | Register for an account easily                                        | View my personal account profile                                                                |
+| 9                            | Site User                 | Log in and logout easily                                              | Access my account and all relevant information                                                  |
+| 10                           | Site User                 | Recover my password if I forget it                                    | Regain access to my account easily                                                              |
+| 11                           | Site User                 | Receive a confirmation email after I register for an account          | Verify that I registered successfully                                                           |
+| 12                           | Site User                 | Have my own user profile                                              | See my order history and know that my payment info is saved                                     |
 | Sort & Search                |                           |                                                                       |                                                                                                 |
-| 15                           | Shopper                   | Sort all available products                                           | View the products according to price or category                                                |
-| 16                           | Shopper                   | Sort a specific category of product                                   | View the products in that category by price or name                                             |
-| 17                           | Shopper                   | Search for specific items by their name or product description        | Find a particular product I’m interested in                                                     |
-| 18                           | Shopper                   | See my search results                                                 | Check product availability and suitability                                                      |
+| 13                           | Shopper                   | Sort all available products                                           | View the products according to price or category                                                |
+| 14                           | Shopper                   | Sort a specific category of product                                   | View the products in that category by price or name                                             |
+| 15                           | Shopper                   | Search for specific items by their name or product description        | Find a particular product I’m interested in                                                     |
+| 16                           | Shopper                   | See my search results                                                 | Check product availability and suitability                                                      |
 | Purchasing & Checkout        |                           |                                                                       |                                                                                                 |
-| 19                           | Shopper                   | Select the quantity of product easily                                 | Choose how many I would like to purchase                                                        |
-| 20                           | Shopper                   | View all items in my shopping cart                                    | Easily see the total cost and the exact items I can expect to receive                           |
-| 21                           | Shopper                   | Manually adjust the quantity of items in my shopping cart             | Control the number of items I want and make any final changes prior to checkout                 |
-| 22                           | Shopper                   | Easily submit my payment details                                      | Checkout easily and quickly without any problems                                                |
-| 23                           | Shopper                   | See a confirmation of my order after checkout                         | Be certain everything went as expected and verify that no mistakes were made                    |
-| 24                           | Shopper                   | Receive an order confirmation email following checkout                | Have proof of purchase and a record of the transaction for future reference                     |
+| 17                           | Shopper                   | Select the quantity of product easily                                 | Choose how many I would like to purchase                                                        |
+| 18                           | Shopper                   | View all items in my shopping cart                                    | Easily see the total cost and the exact items I can expect to receive                           |
+| 19                           | Shopper                   | Manually adjust the quantity of items in my shopping cart             | Control the number of items I want and make any final changes prior to checkout                 |
+| 20                           | Shopper                   | Easily submit my payment details                                      | Checkout easily and quickly without any problems                                                |
+| 21                           | Shopper                   | See a confirmation of my order after checkout                         | Be certain everything went as expected and verify that no mistakes were made                    |
+| 22                           | Shopper                   | Receive an order confirmation email following checkout                | Have proof of purchase and a record of the transaction for future reference                     |
 | Admin & Store Management     |                           |                                                                       |                                                                                                 |
-| 25                           | Store owner/Administrator | Add new product(s)                                                    | List new products to sell in the store                                                          |
-| 26                           | Store owner/Administrator | Edit product(s)                                                       | Make necessary changes to product details including images, descriptions, prices etc            |
-| 27                           | Store owner/Administrator | Delete product(s)                                                     | Remove products from store when no longer required                                              |
+| 23                           | Store owner/Administrator | Add new product(s)                                                    | List new products to sell in the store                                                          |
+| 24                           | Store owner/Administrator | Edit product(s)                                                       | Make necessary changes to product details including images, descriptions, prices etc            |
+| 25                           | Store owner/Administrator | Delete product(s)                                                     | Remove products from store when no longer required                                              |
+| Blogs & Comments             |                           |                                                                       |                                                                                                 |
+| 26                           | Site visitor              | Easily find the website blog articles                                 | Read the ones I'm interested in                                                                 |
+| 27                           | Site visitor              | Write a comment about a blog post                                     | Contribute and offer my opinion relating to the article.
+
+
 
 
 Further information and screenshots showing how this project meets the user's needs can be
-found in the separate [TESTING.md](https://github.com/JohnW876/blob/master/TESTING.md) file.
+found in the separate [TESTING.md](https://github.com/JohnW876/gift-shack/blob/master/TESTING.md) file.
 
 ### **Data design**
 
 When designing the database for the app I stuck closely to the needs represented in the user stories.
 
+**Product Model**
 
+| Field       | Type         |
+|-------------|--------------|
+| id          |  integer     |
+| category    | binary       |
+| sku         | varchar(254) |
+| name        | varchar(254) |
+| description | text         |
+| price       | decimal      |
+| rating      | decimal      |
+| image       | blob         |
 
+**Category Model**
 
+| Field         | Type          |
+|---------------|---------------|
+| name          |  varchar(254) |
+| friendly_name | varchar(254)  |
 
+**Order Model**
+
+| Field           | Type         |
+|-----------------|--------------|
+| id              | integer      |
+| order_number    | varchar(32)  |
+| user_profile    | varchar      |
+| full_name       | varchar(50)  |
+| email           | string(254)  |
+| phone_number    | varchar(20)  |
+| street_address1 | varchar(80)  |
+| street_address2 | varchar(80)  |
+| town_or_city    | varchar(40)  |
+| county          | varchar(80)  |
+| post_code       | varchar(20)  |
+| country         | varchar(80)  |
+| date            | datetime     |
+| delivery_cost   | decimal(6)   |
+| order_total     | decimal(10)  |
+| grand_total     | decimal(10)  |
+| original_bag    | text         |
+| stripe_pid      | varchar(254) |
+
+**Order Line Item Model**
+
+| Field          | Type          |
+|----------------|---------------|
+| order          |  varchar(255) |
+| product        | varchar(255)  |
+| quantity       | integer       |
+| lineitem_total | decimal(6)    |
+
+**User Profile Model**
+
+| Field                   | Type        |
+|-------------------------|-------------|
+| user                    |  string     |
+| default_phone_number    | varchar(20) |
+| default_street_address1 | varchar(80) |
+| default_street_address2 | varchar(80) |
+| default_town_or_city    | varchar(40) |
+| default_county          | varchar(80) |
+| default_postcode        | varchar(20) |
+| default_country         | varchar(20) |
+
+**Blog Posts Model**
+
+| Field      | Type          |
+|------------|---------------|
+| title      |  varchar(200) |
+| slug       | varchar(200)  |
+| author     | varchar(200)  |
+| updated_on | datetime      |
+| content    | text          |
+| created_on | datetime      |
+| status     | integer       |
+| image_url  | blob          |
+| image      | blob          |
+
+**Comments Model**
+
+| Field      | Type          |
+|------------|---------------|
+| post       |  varchar(200) |
+| name       | varchar(80)   |
+| email      | varchar(80)   |
+| body       | text          |
+| created_on | datetime      |
+| active     | boolean       |
 
 ### **Wireframe mockups:**
 Below is a link to the project's wireframe mockups which were created using Balsamiq Wireframes software prior to development to help with visualisation of features and layout. 
@@ -191,7 +279,7 @@ When considering the trade off between importance and viability, the following f
 
 ## **Testing**
 
-Information regarding testing can be found in this separate [TESTING.md](https://github.com/JohnW876/blob/master/TESTING.md) file.
+Information regarding testing can be found in this separate [TESTING.md](https://github.com/JohnW876/gift-shack/blob/master/TESTING.md) file.
 
 ---
 ## **Deployment**
@@ -206,8 +294,8 @@ Information regarding testing can be found in this separate [TESTING.md](https:/
 All site content was written by John Withey.
 
 ### **Media**
-All images used in this project were created by John Withey except for the homepage image which was sourced from Icons8 Team at Unsplash. 
-* [Unsplash](https://unsplash.com/)
+All images used in this project were created by John Withey. 
+
 
 ### **Code**
 I used code from
