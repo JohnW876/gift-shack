@@ -23,8 +23,11 @@
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             {% for post in post_list %}
+
             <div class="card mb-4">
-                <img class="img-responsive" src="{{ post.image }}" style="width:25%" alt="{{ post.title }}">
+                {% if post.image %}
+                <img class="img-responsive" src="{{ post.image.url }}" style="width:25%" alt="{{ post.title }}">
+                {% endif %}
                 <div class="card-body shadow">
                     <h3 class="card-title">{{ post.title }}</h3>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
