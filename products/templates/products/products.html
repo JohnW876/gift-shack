@@ -45,8 +45,8 @@
                     </li>
                 </ul>
                 <div class="row">
-                    <div class="col-12 col-md-6 order-md-first">
-                            <p class="text-muted mt-3 text-center text-md-left">
+                    <div class="col-12">
+                            <p class="text-muted mt-3 text-center">
                                 {% if search_term or current_categories or current_sorting != 'None_None' %}
                                     <span class="small"><a href="{% url 'products' %}">Gifts Home</a> | </span>
                                 {% endif %}
@@ -58,7 +58,7 @@
         </div>
     </div>
     
-        
+<!-- Pagination code modified from https://pypi.org/project/django-pagination-bootstrap/2.4.1/-->     
 {% autopaginate products 12 %}
          <div class="row">
             <div class="product-container col-10 offset-1">
