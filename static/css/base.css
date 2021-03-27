@@ -135,27 +135,23 @@ hr.btm-rule {
 }
 
 /* Font for page names */
-
 .page-title {
     font-size: 30px;
     color: #269ccc;
 }
 
 /*Product details page */
-
 .product-details {
     margin-bottom: 60px;
 }
 
 /*Shopping bag */
-
 .update-link,
 .remove-item {
     cursor: pointer;
 }
 
 /* Toasts */
-
 .message-container {
     position: fixed;
     top: 150px;
@@ -168,7 +164,6 @@ hr.btm-rule {
 }
 
 /* Allauth forms */
-
 .allauth-form-inner-content input {
     border-color: #000;
 }
@@ -177,8 +172,7 @@ hr.btm-rule {
     display: none;
 }
 
-/* Product management form code from Boutique Ado mini project */
-
+/* Product management form. Code from Boutique Ado mini project */
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -195,7 +189,6 @@ hr.btm-rule {
 }
 
 /* Products page paginator - code modified from https://www.w3schools.com/Css/css3_pagination.asp */
-
 .pagination {
     display: flex;
     justify-content: center;
@@ -231,7 +224,6 @@ hr.btm-rule {
 }
 
 /* Media Queries */
-
 @media only screen and (max-width: 540px) {
   .welcome {
     margin-top: 30px;
@@ -259,7 +251,6 @@ hr.btm-rule {
 
 
 /* Animated homepage carousel code from http://anicollection.github.io/#/flippers/flipInX */
-
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -347,7 +338,6 @@ hr.btm-rule {
 
 
 /* Footer code modified from https://codepen.io/anu-uxe/pen/drJERE */
-
 .footer {
   background: rgb(45, 47, 48);
   color: white;

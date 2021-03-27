@@ -3,6 +3,7 @@ from .models import Post
 from .forms import CommentForm
 from django.shortcuts import render, get_object_or_404
 
+# Blog code modified from https://djangocentral.com/building-a-blog-application-with-django/
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')

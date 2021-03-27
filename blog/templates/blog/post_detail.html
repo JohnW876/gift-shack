@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
+<!--Blog code modified from https://djangocentral.com/building-a-blog-application-with-django/-->
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'blog/css/posts.css' %}">
 {% endblock %}
@@ -48,7 +48,7 @@
     <div class="row">    
         <div class="col-12 card mb-4  mt-3 ">
             <div class="card-body">
-                <!-- comments -->
+                <!-- Comments. Code modified from https://djangocentral.com/creating-comments-system-with-django/ -->
                 <h2>{{ comments.count }} comments</h2>
 
                 {% for comment in comments %}
