@@ -77,42 +77,87 @@
 
 I continually tested how the page was rendering across all device sizes using Chrome DevTools.
 
+--- 
 ### **User Story Tests**
 The following section shows how the project meets the user's needs as outlined in the user stories and illustrates these with screenshots of the finished project. 
 
 **1. As a shopper, I want to be able to view all products at a glance so that I can choose which ones I’d like to buy.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* The main nav menu 'GIFTS' takes users to view all products.
 
-Screenshots
+![Products Page - Tablet](documentation/images/screenshots/products_page_tablet.png)
 
 **2. As a shopper, I want to be able to view individual items for sale so that I can assess the product details prior to purchasing. (Price, product description, available images).** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* Product detail page
 
-Screenshots
+![Product detail Page](documentation/images/screenshots/product_detail.png)
 
 **3. As a shopper, I want to be able to view different categories of products so that I can easily find the types of products I’m looking for.**  
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* Categories selector on the products page.
 
-Screenshots
+![Products Page - Tablet](documentation/images/screenshots/products_page_tablet.png)
+
 
 **4. As a shopper, I want to be able to view a running total of my chosen products on each page so that I can manage how much I spend.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* The Shopping Basket icon features on every page with a running total.
 
-Screenshots
+![Shopping basket](documentation/images/screenshots/running_total.png)
 
-**5. As a shopper, I want to be able to easily find answers to frequently asked questions (FAQs) so that I can make an informed decision when considering whether to buy or not.** 
+**5. As a shopper, I want to be able to easily find useful and relevant links so that I can visit the store's social media pages and blog pages.** 
+
+These user's needs are met via:
+* The footer featuring links to social pages and blog.
+
+
+![Shopping basket](documentation/images/screenshots/footer-tablet.png)
+
+
+**6. As a shopper, I want to be able to contact the store owner so that I can make customer enquiries about products, discounts, refunds, etc.** 
+
+These user's needs are met via:
+* The contact page with contact form. 
+
+![Contact page](documentation/images/screenshots/contact_tablet.png)
+
+**7. As a buyer, I want to be able to contact the store owner so that I can enquire about potentially sourcing Gift Shack products for the store(s) that I represent.**  
+
+These user's needs are met via:
+* The contact form on the contact page
+* Store contact details in the footer.
+
+![Contact page](documentation/images/screenshots/contact_mob.png)
+
+**8. As a site user, I want to be able to register for an account easily so that I can view my personal account profile.** 
+
+These user's needs are met via:
+* My Account icon with dropdown menu to Register.
+* Signup form.
+
+![My Account Icon](documentation/images/screenshots/my_account_icon.png)
+
+![Sign Up Form](documentation/images/screenshots/sign_up_tab.png)
+
+**9. As a site user, I want to be able to log in and log out easily so that I can access my account and all relevant information.**  
+
+These user's needs are met via:
+* Sign In Form
+* Logout from My Account Icon menu
+* Sign out page.
+
+![Sign In Form](documentation/images/screenshots/sign_in.png)
+
+![Logout](documentation/images/screenshots/menu_log_out.png)
+
+![Sign out](documentation/images/screenshots/sign_out.png)
+
+**10. As a site user, I want to be able to recover my password if I forget it so that I can regain access to my account easily.**  
 
 These user's needs are met via:
 * Page/Feature
@@ -120,7 +165,7 @@ These user's needs are met via:
 
 Screenshots
 
-**6. As a shopper, I want to be able to easily find useful and relevant links so that I can visit the store's social media pages and blog pages.** 
+**11. As a site user, I want to be able to receive a confirmation email after I register for an account so that I can verify that I have registered successfully.** 
 
 These user's needs are met via:
 * Page/Feature
@@ -128,7 +173,7 @@ These user's needs are met via:
 
 Screenshots
 
-**7.As a shopper, I want to be able to find out about the store’s returns policy so that I can be reassured when deciding to make a purchase.** 
+**12. As a site user, I want to be able to have my own user profile so that I can see my order history and know that my payment info is saved.** 
 
 These user's needs are met via:
 * Page/Feature
@@ -136,7 +181,7 @@ These user's needs are met via:
 
 Screenshots
 
-**8. As a shopper, I want to be able to contact the store owner so that I can make customer enquiries about products, discounts, refunds, etc.** 
+**13. As a shopper, I want to be able to sort all available products so that I can view the products according to price, category or rating.**  
 
 These user's needs are met via:
 * Page/Feature
@@ -144,7 +189,7 @@ These user's needs are met via:
 
 Screenshots
 
-**9. As a buyer, I want to be able to contact the store owner so that I can enquire about potentially sourcing Gift Shack products for the store(s) that I represent.**  
+**14. As a shopper, I want to be able to sort a specific category of product so that I can view the products in that category by price, name or rating.** 
 
 These user's needs are met via:
 * Page/Feature
@@ -152,7 +197,7 @@ These user's needs are met via:
 
 Screenshots
 
-**10. As a site user, I want to be able to register for an account easily so that I can view my personal account profile.** 
+**15. As a shopper, I want to be able to search for specific items by their name or product description so that I can find a particular product I’m interested in.**  
 
 These user's needs are met via:
 * Page/Feature
@@ -160,7 +205,7 @@ These user's needs are met via:
 
 Screenshots
 
-**11. As a site user, I want to be able to log in and log out easily so that I can access my account and all relevant information.**  
+**16. As a shopper, I want to be able to see my search results so that I can check product availability and suitability.** 
 
 These user's needs are met via:
 * Page/Feature
@@ -168,7 +213,7 @@ These user's needs are met via:
 
 Screenshots
 
-**12. As a site user, I want to be able to recover my password if I forget it so that I can regain access to my account easily.**  
+**17. As a shopper, I want to be able to select the quantity of product easily so that I can choose how many I would like to purchase.**  
 
 These user's needs are met via:
 * Page/Feature
@@ -176,7 +221,7 @@ These user's needs are met via:
 
 Screenshots
 
-**13. As a site user, I want to be able to receive a confirmation email after I register for an account so that I can verify that I have registered successfully.** 
+**18. As a shopper, I want to be able to view all items in my shopping cart so that I can easily see the total cost and the exact items I can expect to receive.** 
 
 These user's needs are met via:
 * Page/Feature
@@ -184,7 +229,7 @@ These user's needs are met via:
 
 Screenshots
 
-**14. As a site user, I want to be able to have my own user profile so that I can see my order history and know that my payment info is saved.** 
+**19. As a shopper, I want to be able to adjust the quantity of items in my shopping cart so that I can control the number of items I want to buy and make any final changes prior to checkout.**  
 
 These user's needs are met via:
 * Page/Feature
@@ -192,7 +237,7 @@ These user's needs are met via:
 
 Screenshots
 
-**15. As a shopper, I want to be able to sort all available products so that I can view the products according to price, category or rating.**  
+**20. As a shopper, I want to be able to easily submit my payment details so that I can checkout easily and quickly without any problems.** 
 
 These user's needs are met via:
 * Page/Feature
@@ -200,7 +245,7 @@ These user's needs are met via:
 
 Screenshots
 
-**16. As a shopper, I want to be able to sort a specific category of product so that I can view the products in that category by price, name or rating.** 
+**21. As a shopper, I want to be able to see a confirmation of my order after checkout so that I can be certain it was processed as expected and verify that no mistakes were made.** 
 
 These user's needs are met via:
 * Page/Feature
@@ -208,7 +253,7 @@ These user's needs are met via:
 
 Screenshots
 
-**17. As a shopper, I want to be able to search for specific items by their name or product description so that I can find a particular product I’m interested in.**  
+**22. As a shopper, I want to be able to receive an order confirmation email following checkout so that I can have proof of purchase and a record of the transaction for future reference.** 
 
 These user's needs are met via:
 * Page/Feature
@@ -216,7 +261,7 @@ These user's needs are met via:
 
 Screenshots
 
-**18. As a shopper, I want to be able to see my search results so that I can check product availability and suitability.** 
+**23. As a store owner/administrator, I want to be able to add new products so that I can list them to sell in the store.** 
 
 These user's needs are met via:
 * Page/Feature
@@ -224,7 +269,7 @@ These user's needs are met via:
 
 Screenshots
 
-**19. As a shopper, I want to be able to select the quantity of product easily so that I can choose how many I would like to purchase.**  
+**24. As a store owner/administrator, I want to be able to edit products so that I can update and make necessary changes to product details.** 
 
 These user's needs are met via:
 * Page/Feature
@@ -232,7 +277,7 @@ These user's needs are met via:
 
 Screenshots
 
-**20. As a shopper, I want to be able to view all items in my shopping cart so that I can easily see the total cost and the exact items I can expect to receive.** 
+**25. As a store owner/administrator, I want to be able to delete products so that I can remove them from the store when no longer required.** 
 
 These user's needs are met via:
 * Page/Feature
@@ -240,61 +285,18 @@ These user's needs are met via:
 
 Screenshots
 
-**21. As a shopper, I want to be able to adjust the quantity of items in my shopping cart so that I can control the number of items I want to buy and make any final changes prior to checkout.**  
+**26. As a site visitor, I want to be able to easily find the website blog articles so that I can read the ones I'm interested in.** 
 
 These user's needs are met via:
 * Page/Feature
 * Page/Feature
 
-Screenshots
-
-**22. As a shopper, I want to be able to easily submit my payment details so that I can checkout easily and quickly without any problems.** 
+**27. As a site visitor, I want to be able to write a comment about a blog post so that I can contribute and offer my opinion relating to the article.** 
 
 These user's needs are met via:
 * Page/Feature
 * Page/Feature
 
-Screenshots
-
-**23. As a shopper, I want to be able to see a confirmation of my order after checkout so that I can be certain it was processed as expected and verify that no mistakes were made.** 
-
-These user's needs are met via:
-* Page/Feature
-* Page/Feature
-
-Screenshots
-
-**24. As a shopper, I want to be able to receive an order confirmation email following checkout so that I can have proof of purchase and a record of the transaction for future reference.** 
-
-These user's needs are met via:
-* Page/Feature
-* Page/Feature
-
-Screenshots
-
-**25. As a store owner/administrator, I want to be able to add new products so that I can list them to sell in the store.** 
-
-These user's needs are met via:
-* Page/Feature
-* Page/Feature
-
-Screenshots
-
-**26. As a store owner/administrator, I want to be able to edit products so that I can update and make necessary changes to product details.** 
-
-These user's needs are met via:
-* Page/Feature
-* Page/Feature
-
-Screenshots
-
-**27. As a store owner/administrator, I want to be able to delete products so that I can remove them from the store when no longer required.** 
-
-These user's needs are met via:
-* Page/Feature
-* Page/Feature
-
-Screenshots
 
 ### **Interactivity Tests**
 The following tests were carried out on mobile, tablet and desktop devices to confirm that all interactive parts of the site are working as expected:
