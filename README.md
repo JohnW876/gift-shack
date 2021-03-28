@@ -78,138 +78,151 @@ A mobile first approach was taken to create this project with consideration of e
 
 
 
-
+---
 Further information and screenshots showing how this project meets the user's needs can be
 found in the separate [TESTING.md](https://github.com/JohnW876/gift-shack/blob/master/TESTING.md) file.
 
+---
 ### **Data design**
 
-When designing the database for the app I stuck closely to the needs represented in the user stories.
+The schema detailed below was created to help understand the structure of the database and outline how the data in each of the different models relate to each other.
+* During development sqlite3 was used to store the database while Heroku Postgres was used during the production phase.
+
+![Database Schema](documentation/images/schema/dbschema.png)
+
+#### **Data Models** 
+
+These models define the data that each will hold and show relationships to other tables via the foreign keys.
 
 **Product Model**
+* Holds the data relevant to the products listed for sale and is related to the category model shown via the foreign key.
+* This means that when a customer searches for a product by category the data held here can be used to return relevant product information. 
 
 | Field       | Type         |
 |-------------|--------------|
-| id          |  integer     |
-| category    | binary       |
-| sku         | varchar(254) |
-| name        | varchar(254) |
-| description | text         |
-| price       | decimal      |
-| rating      | decimal      |
-| image       | blob         |
+| category    | ForeignKey   |
+| sku         | CharField    |
+| name        | CharField    |
+| description | TextField    |
+| has_sizes   | BooleanField |
+| price       | DecimalField |
+| rating      | DecimalField |
+| image       | ImageField   |
 
 **Category Model**
+* Holds the name data relating to the categories of products such as greetings cards, tea cups, coffee mugs etc.
+* The name and friendly name fields distinguish between how the categories are referred to in the code and how they are displayed to the user.
 
 | Field         | Type          |
 |---------------|---------------|
-| name          |  varchar(254) |
-| friendly_name | varchar(254)  |
+| name          | CharField     |
+| friendly_name | CharField     |
 
 **Order Model**
+* Holds all the data regarding a customer order and as such is related to the user profile model via the foreign key.
+* This allows orders to be linked to registered users and is created via the order model in the checkout app. 
+* This means that when a registered user views their profile, their related orders are made available using this data. 
 
 | Field           | Type         |
 |-----------------|--------------|
-| id              | integer      |
-| order_number    | varchar(32)  |
-| user_profile    | varchar      |
-| full_name       | varchar(50)  |
-| email           | string(254)  |
-| phone_number    | varchar(20)  |
-| street_address1 | varchar(80)  |
-| street_address2 | varchar(80)  |
-| town_or_city    | varchar(40)  |
-| county          | varchar(80)  |
-| post_code       | varchar(20)  |
-| country         | varchar(80)  |
-| date            | datetime     |
-| delivery_cost   | decimal(6)   |
-| order_total     | decimal(10)  |
-| grand_total     | decimal(10)  |
-| original_bag    | text         |
-| stripe_pid      | varchar(254) |
+| order_number    | CharField    |
+| user_profile    | ForeignKey   |
+| full_name       | CharField    |
+| email           | EmailField   |
+| phone_number    | CharField    |
+| street_address1 | CharField    |
+| street_address2 | CharField    |
+| town_or_city    | CharField    |
+| county          | CharField    |
+| post_code       | CharField    |
+| country         | CharField    |
+| date            | DateTimeField|
+| delivery_cost   | DecimalField |
+| order_total     | DecimalField |
+| grand_total     | DecimalField |
+| original_bag    | TextField    |
+| stripe_pid      | CharField    |
 
 **Order Line Item Model**
+* Also created in the checkout app, the order line item model helps to generate items in the shopping bag and as such is related to the product and order models to which it has access.  
 
 | Field          | Type          |
 |----------------|---------------|
-| order          |  varchar(255) |
-| product        | varchar(255)  |
-| quantity       | integer       |
-| lineitem_total | decimal(6)    |
+| order          | ForeignKey    |
+| product        | ForeignKey    |
+| product_size   | CharField     |
+| quantity       | IntegerField  |
+| lineitem_total | DecimalField  |
 
 **User Profile Model**
+* Holds the user data regarding default delivery details and their order history. 
+* The OneToOneField type ensures one profile relates to just one user. 
 
 | Field                   | Type        |
 |-------------------------|-------------|
-| user                    |  string     |
-| default_phone_number    | varchar(20) |
-| default_street_address1 | varchar(80) |
-| default_street_address2 | varchar(80) |
-| default_town_or_city    | varchar(40) |
-| default_county          | varchar(80) |
-| default_postcode        | varchar(20) |
-| default_country         | varchar(20) |
+| user                    |OneToOneField|
+| default_phone_number    | CharField   |
+| default_street_address1 | CharField   |
+| default_street_address2 | CharField   |
+| default_town_or_city    | CharField   |
+| default_county          | CharField   |
+| default_postcode        | CharField   |
+| default_country         | CharField   |
 
 **Blog Posts Model**
+* Holds the data relating to each author's blog post. Consequently the author field takes the user in userprofile as a foreign key.
 
 | Field      | Type          |
 |------------|---------------|
-| title      |  varchar(200) |
-| slug       | varchar(200)  |
-| author     | varchar(200)  |
-| updated_on | datetime      |
-| content    | text          |
-| created_on | datetime      |
-| status     | integer       |
-| image_url  | blob          |
-| image      | blob          |
+| title      | CharField     |
+| slug       | SlugField     |
+| author     | ForeignKey    |
+| updated_on | DateTimeField |
+| content    | TextField     |
+| created_on | DateTimeField |
+| status     | IntegerField  |
+| image_url  | URLField      |
+| image      | ImageField    |
 
 **Comments Model**
+* Used to link the comments relating to each blog post and so takes post as a foreign key.
 
 | Field      | Type          |
 |------------|---------------|
-| post       |  varchar(200) |
+| post       | ForeignKey    |
 | name       | varchar(80)   |
 | email      | varchar(80)   |
 | body       | text          |
 | created_on | datetime      |
 | active     | boolean       |
 
+---
 ### **Wireframe mockups:**
 Below is a link to the project's wireframe mockups which were created using Balsamiq Wireframes software prior to development to help with visualisation of features and layout. 
 
 https://github.com/JohnW876//tree/master/wireframes
  
-Wireframe mockups were created for every page of the website at mobile, tablet and desktop sizes and I referred to them throughout development. 
+Wireframe mockups were created at mobile, tablet and desktop sizes and I referred to them throughout development. 
 
-
+---
 ### **User Expectations:**
 * What will they expect to see? - Users will expect to see an intuitive app with accessible features and a well designed user interface. 
 * Does the site look credible and trustworthy? - Many elements will contribute to the first impression of a trustworthy site. These include, clear and intuitive navigation, good design and functionality. 
 * Does the site offer what the user wants? - The features will need to meet the user's goals whilst delivering expected functionality and a valuable user experience.
 * Does the site seem valuable enough for users to stay and return? - The features, functionality, usability and design will need to meet or exceed expectations to provide the value needed to ensure continued usage.  
   
-
+---
 ### **Market Research:**
-* Online research shows a number of apps to help writers work on their technique and improve their writing skills.
-* There are also a good number of apps that deliver work by famous poets in either spoken word or purely textual formats.
-* However there are very few that allow any user, regardless of skill level, to contribute their own work to a community and to create their own collection and/or manage a store of their work. 
-* This app aims to fill that gap in the market and be available to all poets as an accessible and useful tool to help develop their body of work.
+* 
 
 
 ### **Visual Design:**
 * Colour scheme -
-  When designing the site I wanted to convey themes relevant to poetry such as passion and human emotions. In colour psychology these themes closely align to red which suggests passion, danger, life and love. 
-  Red is used consistently throughout the site in the key elements such as the brand logo, page headings, edit form buttons, form icons, nav mobile dropdown and the social footer background. 
-  With red as such a dominant colour it would not help to introduce another strong colour but does balance in a classic scheme with black, white and grey and is suggestive of paper and ink colours and poetry writing.
-
-* Imagery - I also wanted to think of the design from a poet's point of view giving an analogue writer's feel to the homepage with background images of paper textures. 
-* This was also the reason I chose to use Materialize CSS to help build the site as I felt the Material Design ethos offered simplicity whilst being inspired by paper and ink and was appropriate for poetry.
-* Typography - For the main body of the site including headings and navigation, the chosen font is Open Sans for clarity and legibility. I did consider a script type in reference to handwriting but wanted to keep the site looking modern and accessible and thought a script would look too old fashioned and stuffy!
-* For the poem text I used 'pre' tags in html which helps with the problem of how to display poems with appropriate line breaks. The Courier font used with the poems allows the text to stand out and is more easy to read from a user's perspective. 
-* The brand logo uses Averia Serif Libre font which is intended to be a warm and friendly rather than too stiff and formal. 
-  
+* 
+* 
+* Typography - 
+* 
+ --- 
 ## **Features**
 
 * 
@@ -247,8 +260,8 @@ There are a number of carefully chosen features on the homepage:
 ### **Log Out**
 * 
 
-### **Flash Messages**
-* User friendly flash messages display on the screen to guide and inform the user at key events.
+### **Toast Messages**
+* User friendly toast messages display on the screen to guide and inform the user at key events.
 
 ### **Features to implement in future**
 When considering the trade off between importance and viability, the following features could not be implemented at this stage but would make valuable additions in future and improve the user experience.
@@ -256,10 +269,10 @@ When considering the trade off between importance and viability, the following f
 *
 *
 *
-
+---
 ## **Languages Used** 
 * HTML, CSS, Javascript and Python are used in this project.
-
+---
 ## **Technologies Used**
 * [Gitpod](https://www.gitpod.io/) Gitpod IDE was used to develop the website.
 * [Bootstrap](https://getbootstrap.com/) A front-end framework used to help build the site and make it responsive on all devices.
@@ -272,11 +285,12 @@ When considering the trade off between importance and viability, the following f
 * [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) A set of Django applications used for the site's authentication, registration and account management. 
 * [Django template language](https://docs.djangoproject.com/en/3.1/ref/templates/) Used to dynamically generate HTML templates.
 * [Stripe](https://stripe.com/gb) Used for secure online payment processing. 
-* [Sqlite3](https://sqlite.org/index.html) To store the site's database during development.
-* [Heroku](https://www.heroku.com/) To deploy the site.
+* [Sqlite3](https://sqlite.org/index.html) To store the database during development.
+* [Heroku](https://www.heroku.com/) To host and deploy the site.
 * [Heroku Postgres](https://www.heroku.com/postgres) To store the production database.
+* [AWS](https://aws.amazon.com/) Amazon Web Services stores the static files as well as the media images.
 
-
+---
 ## **Testing**
 
 Information regarding testing can be found in this separate [TESTING.md](https://github.com/JohnW876/gift-shack/blob/master/TESTING.md) file.
@@ -298,12 +312,51 @@ All images used in this project were created by John Withey.
 
 
 ### **Code**
-I used code from
-* https://www.
+Code for the project was used from the following sources:
+
+Home Page - Bootstrap for navbar toggler
+* ![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/navbar/)
+
+Footer - Code from the footer was taken from here and modified
+![Ordinary Coders](https://www.ordinarycoders.com/blog/article/bootstrap-footers)
+
+* Specifically:
+![Codepen](https://codepen.io/anu-uxe/pen/drJERE)
+
+Easy Sticky footer - Code was modified from here to help make the footer stick to the bottom of page. 
+* ![YouTube](https://www.youtube.com/watch?v=yc2olxLgKLk)
+
+Products page - Bootstrap for nav items used to help create framework for dropdown selectors and sort selector.
+* ![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/navs/)
+
+For Nav bar dropdown button and menu
+* ![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/dropdowns/)
+
+Carousel from Bootstrap
+* ![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/carousel/)
+
+Toasts from Bootstrap
+* ![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/toasts/)
+
+Blog and comments modified from
+* ![Django Central](https://djangocentral.com/building-a-blog-application-with-django/)
+
+Contact page from here
+* ![SefYudem](https://github.com/sefyudem/Contact-Form-HTML-CSS)
+
+Pagination code modified from here originally
+* ![Django Pagination Bootstrap](https://pypi.org/project/django-pagination-bootstrap/)
+
+Installed older version of pagination from here as new version not supported by Heroku
+* ![Django Pagination Bootstrap](https://pypi.org/project/django-pagination-bootstrap/2.4.1/)
+
+Animated homepage carousel code from
+* ![Ani Collection](http://anicollection.github.io/#/flippers/flipInX)
 
 
 
 
+---
 ### **Acknowledgements**
 As an artist and illustrator I wanted to design and build a website that I could actually use to help promote and sell the products that I create.
 It's been fun and a great challenge to produce an app that has real world value and will be used to hopefully generate sales in the future.
