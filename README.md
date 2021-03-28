@@ -190,17 +190,17 @@ These models define the data that each will hold and show relationships to other
 | Field      | Type          |
 |------------|---------------|
 | post       | ForeignKey    |
-| name       | varchar(80)   |
-| email      | varchar(80)   |
-| body       | text          |
-| created_on | datetime      |
-| active     | boolean       |
+| name       | CharField     |
+| email      | EmailField    |
+| body       | TextField     |
+| created_on | DateTimeField |
+| active     | BooleanField  |
 
 ---
 ### **Wireframe mockups:**
 Below is a link to the project's wireframe mockups which were created using Balsamiq Wireframes software prior to development to help with visualisation of features and layout. 
 
-https://github.com/JohnW876//tree/master/wireframes
+https://github.com/JohnW876/gift-shack/tree/master/documentation/wireframes
  
 Wireframe mockups were created at mobile, tablet and desktop sizes and I referred to them throughout development. 
 
@@ -213,62 +213,51 @@ Wireframe mockups were created at mobile, tablet and desktop sizes and I referre
   
 ---
 ### **Market Research:**
-* 
+* I researched the gift market online and compared a number of e-commerce gift websites to get a feel for the UX and UI.
 
 
 ### **Visual Design:**
-* Colour scheme -
-* 
-* 
-* Typography - 
-* 
+* Colour scheme - I limited the colours to blue, black and white. I wanted to allow the products to be the focus and so I deliberately kept the palette to a minimum. These are also colours which complement and support the colour in the artwork of the products without pulling your attention from them. 
+* Typography - I chose a clean sans serif font of Barlow from Googlefonts for the type which I used throughout the site. 
+* Accents - I have used the blue in buttons, icons, hover links and page headings. I've used white for the page background for a simple, classic gallery style and I've used black for the banner and main body type. 
  --- 
 ## **Features**
 
-* 
-* 
-* 
-* 
-* 
-* 
+The following project features were included to meet the needs outlined in the user stories above. 
 
+* Responsive navbar featuring navlinks to all main pages (Home, Gifts, Contact, Blog).
+* My Account icon on home page featuring menu dropdown for users (Register, Login and My Profile) and superusers (Product Management).
+* Shopping basket icon on homepage to view shopping cart and updates automatically with running total of added products.
+* Search form on homepage to allow users to search for products by category or product description keywords. 
+* Responsive navbar with navbar toggler on smaller screens.
+* Large callout on homepage with button to go straight to products.
+* Homepage carousel featuring fade transitions between featured products and JQuery interactive flip animation on touch or mouse over.
+* Responsive footer with links to social media, latest blog posts and contact page. 
+* Toast messages feature to inform the user of key events throughout the site such as adding, deleting and updating products, adding or removing items from the shopping basket, signing in or out.
+* Products page featuring sort functionality by price, rating, product name and product category.
+* Pagination feature which limits the individual products on a given page to a maximum of 12 and provides links to navigate through the remaining products.
+* Product detail page which displays product images and descriptions, quantity changer buttons and links to add products to the shopping bag or keep shopping.
+* Shoppping bag with details of products added as well as subtotal, grand total and quantity buttons with update or remove from bag functions. Also features links to checkout or keeep shopping.
+* Shopping bag notification of amount required to meet the free delivery threshold. 
+* Secure checkout with order summary and forms to gather customer details, delivery information and card payments using Stripe. Links to create an account or login are here also with links back to adjust the shopping bag or to complete the order.
+* Order confirmation page featuring order and delivery details. Email confirmation sent to customers automatically following successful checkout. 
+* User Profile functionality featuring order history default delivery details and button to update information. 
+* Sign in form with link to password reset page.
+* Superuser Product Management page with form to add new products and product images.
+* Superuser Product Management page with form to edit products and product images.
+* Superuser access to edit and delete products from the site via the products pages. 
+* Blog page featuring posts and click through button to see each post in more detail. Posts can only be written by superuser. 
+* Blog comments section on blog detail pages with submission form for site visitors.
+* Contact page featuring contact form with email validation. 
+ 
 
-### **Homepage**
-There are a number of carefully chosen features on the homepage:
-
-* 
-
-
-### **Register Page**
-* 
-
-### **Login Page**
-* 
-
-### **Profile Page**
-* 
-
-### **Edit Poem**
-* 
-
-### **Add Poem Page**
-* 
-
-### **Manage Types Page (Admin user only)**
-* 
-
-### **Log Out**
-* 
-
-### **Toast Messages**
-* User friendly toast messages display on the screen to guide and inform the user at key events.
 
 ### **Features to implement in future**
 When considering the trade off between importance and viability, the following features could not be implemented at this stage but would make valuable additions in future and improve the user experience.
 
-*
-*
-*
+* I would like to implement a newsletter feature to notify customers of new products, new designs and  website updates etc. 
+* If the site goes live I would need to add all of the necessary docs such as FAQ's, Terms and Conditions, Returns and privacy policies etc. 
+
 ---
 ## **Languages Used** 
 * HTML, CSS, Javascript and Python are used in this project.
@@ -310,51 +299,34 @@ All site content was written by John Withey.
 ### **Media**
 All images used in this project were created by John Withey. 
 
-
 ### **Code**
 Code for the project was used from the following sources:
 
-Home Page - Bootstrap for navbar toggler
-* ![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/navbar/)
+![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/navbar/) - Home Page - Bootstrap for navbar toggler
 
-Footer - Code from the footer was taken from here and modified
-![Ordinary Coders](https://www.ordinarycoders.com/blog/article/bootstrap-footers)
+![Ordinary Coders](https://www.ordinarycoders.com/blog/article/bootstrap-footers) - Footer - Code from the footer was taken from here and modified
 
-* Specifically:
-![Codepen](https://codepen.io/anu-uxe/pen/drJERE)
+![Codepen](https://codepen.io/anu-uxe/pen/drJERE) - more specifically used for the footer
 
-Easy Sticky footer - Code was modified from here to help make the footer stick to the bottom of page. 
-* ![YouTube](https://www.youtube.com/watch?v=yc2olxLgKLk)
+![YouTube](https://www.youtube.com/watch?v=yc2olxLgKLk) - Easy Sticky footer - Code was modified from here to help make the footer stick to the bottom of page. 
 
-Products page - Bootstrap for nav items used to help create framework for dropdown selectors and sort selector.
-* ![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/navs/)
+![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/navs/) - Products page - Bootstrap for nav items used to help create framework for dropdown selectors and sort selector.
 
-For Nav bar dropdown button and menu
-* ![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/dropdowns/)
+![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/dropdowns/) - For Nav bar dropdown button and menu
 
-Carousel from Bootstrap
-* ![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/carousel/)
+![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/carousel/) - Carousel from Bootstrap
 
-Toasts from Bootstrap
-* ![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/toasts/)
+![Get Bootstrap](https://getbootstrap.com/docs/4.6/components/toasts/) - Toasts from Bootstrap
 
-Blog and comments modified from
-* ![Django Central](https://djangocentral.com/building-a-blog-application-with-django/)
+![Django Central](https://djangocentral.com/building-a-blog-application-with-django/) - Blog and comments modified from
 
-Contact page from here
-* ![SefYudem](https://github.com/sefyudem/Contact-Form-HTML-CSS)
+![SefYudem](https://github.com/sefyudem/Contact-Form-HTML-CSS) - Contact page from here
 
-Pagination code modified from here originally
-* ![Django Pagination Bootstrap](https://pypi.org/project/django-pagination-bootstrap/)
+![Django Pagination Bootstrap](https://pypi.org/project/django-pagination-bootstrap/) - Pagination code modified from here originally
 
-Installed older version of pagination from here as new version not supported by Heroku
-* ![Django Pagination Bootstrap](https://pypi.org/project/django-pagination-bootstrap/2.4.1/)
+![Django Pagination Bootstrap](https://pypi.org/project/django-pagination-bootstrap/2.4.1/) - Installed older version of pagination from here as new version not supported by Heroku
 
-Animated homepage carousel code from
-* ![Ani Collection](http://anicollection.github.io/#/flippers/flipInX)
-
-
-
+![Ani Collection](http://anicollection.github.io/#/flippers/flipInX) - Animated homepage carousel code from
 
 ---
 ### **Acknowledgements**
