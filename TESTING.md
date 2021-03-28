@@ -160,142 +160,147 @@ These user's needs are met via:
 **10. As a site user, I want to be able to recover my password if I forget it so that I can regain access to my account easily.**  
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* Password reset page
 
-Screenshots
+![Password reset](documentation/images/screenshots/reset_password.png)
 
 **11. As a site user, I want to be able to receive a confirmation email after I register for an account so that I can verify that I have registered successfully.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* Confirmation email sent notification and toast message.
 
-Screenshots
+![Email Sent](documentation/images/screenshots/conf_email.png)
 
 **12. As a site user, I want to be able to have my own user profile so that I can see my order history and know that my payment info is saved.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* The Profile page.
 
-Screenshots
+![Profile page](documentation/images/screenshots/profile.png)
 
 **13. As a shopper, I want to be able to sort all available products so that I can view the products according to price, category or rating.**  
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* Sort selector on the products page
 
-Screenshots
+![Sort selector](documentation/images/screenshots/sort.png)
 
 **14. As a shopper, I want to be able to sort a specific category of product so that I can view the products in that category by price, name or rating.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* The category selector on the products page.
 
-Screenshots
+![Category selector](documentation/images/screenshots/category_selector.png)
 
 **15. As a shopper, I want to be able to search for specific items by their name or product description so that I can find a particular product I’m interested in.**  
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* The search bar at the top of the page.
 
-Screenshots
+![Search bar](documentation/images/screenshots/search.png)
 
 **16. As a shopper, I want to be able to see my search results so that I can check product availability and suitability.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* Search results displayed in products page along with the number of products.
 
-Screenshots
+![Search results](documentation/images/screenshots/search_results.png)
 
 **17. As a shopper, I want to be able to select the quantity of product easily so that I can choose how many I would like to purchase.**  
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* The quantity selector on the product details page.
 
-Screenshots
+![Quantity selector](documentation/images/screenshots/quantity.png)
 
 **18. As a shopper, I want to be able to view all items in my shopping cart so that I can easily see the total cost and the exact items I can expect to receive.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* The Shopping Bag. 
 
-Screenshots
+![Bag](documentation/images/screenshots/bag.png)
 
 **19. As a shopper, I want to be able to adjust the quantity of items in my shopping cart so that I can control the number of items I want to buy and make any final changes prior to checkout.**  
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* Quantity selectors and update/remove buttons in shopping bag.
 
-Screenshots
+![Bag quantity](documentation/images/screenshots/bag_quantity.png)
 
 **20. As a shopper, I want to be able to easily submit my payment details so that I can checkout easily and quickly without any problems.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* Stripe card payment form in the checkout.  
 
-Screenshots
+![Card form](documentation/images/screenshots/card_form.png)
 
 **21. As a shopper, I want to be able to see a confirmation of my order after checkout so that I can be certain it was processed as expected and verify that no mistakes were made.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* Order confirmation details.
 
-Screenshots
+![Order confirmation](documentation/images/screenshots/order_conf.png)
 
 **22. As a shopper, I want to be able to receive an order confirmation email following checkout so that I can have proof of purchase and a record of the transaction for future reference.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* A confirmation email is sent to the user when an order is made.  
+* Toast message confirms this on screen. 
 
-Screenshots
+![Order confirmation](documentation/images/screenshots/toast_email.png)
 
 **23. As a store owner/administrator, I want to be able to add new products so that I can list them to sell in the store.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* Product Management - Add Product form.
 
-Screenshots
+![Add Product](documentation/images/screenshots/add_product.png)
+
+ Top of Form (Above)
+
+![Add Product b](documentation/images/screenshots/add_product_b.png)
+
+ Bottom of form (Above)
 
 **24. As a store owner/administrator, I want to be able to edit products so that I can update and make necessary changes to product details.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* Edit products form in Product Management.
 
-Screenshots
+![Edit products form](documentation/images/screenshots/edit_top.png)
+
+Top of form (Above)
+
+![Edit products form](documentation/images/screenshots/edit_bottom.png)
+
+Bottom of form (Above)
 
 **25. As a store owner/administrator, I want to be able to delete products so that I can remove them from the store when no longer required.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* Delete buttons on the product and product detail page for superusers. 
 
-Screenshots
+![Delete Product b](documentation/images/screenshots/delete.png)
 
 **26. As a site visitor, I want to be able to easily find the website blog articles so that I can read the ones I'm interested in.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* The Blog page and blog details page.
+
+![Blog posts](documentation/images/screenshots/posts.png)
+
+Blog Posts (Above)
+
+![Blog details](documentation/images/screenshots/details.png)
+
+Blog details (Above)
 
 **27. As a site visitor, I want to be able to write a comment about a blog post so that I can contribute and offer my opinion relating to the article.** 
 
 These user's needs are met via:
-* Page/Feature
-* Page/Feature
+* Blog comments underneath the posts and the comment submission form below.
+
+![Blog comments](documentation/images/screenshots/comments.png)
 
 
 ### **Interactivity Tests**
