@@ -537,10 +537,18 @@ All interactive elements were tested and found to be working correctly except fo
 ### **Issues**
 1. The loading spinner did not display during the checkout process.
 2. User did not arrive at the successfully submitted page for the contact form after submitting a valid form. 
+3. There was a problem with horizontal scrolling on the GIFTS page which displays the products. 
+4. When adding pagination to my products page I installed the latest version of ![Django Pagination Bootstrap 2.4.4](https://pypi.org/project/django-pagination-bootstrap/). Unfortunately this caused problems as it wasn't supported in Heroku so I had to uninstall it and install an earlier version instead which was supported ![Django Pagination Bootstrap 2.4.1](https://pypi.org/project/django-pagination-bootstrap/2.4.1/)
+
+This resolved the issue with Heroku and the paginator works however I get a recurring message in the console which says - 
+ " /workspace/.pip-modules/lib/python3.8/site-packages/django_pagination_bootstrap/templatetags/pagination_tags.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'products.models.Product'> QuerySet.
+  paginator = Paginator(value, paginate_by, self.orphans) "
 
 ### **Fixes**
 1. This issue is now resolved. There was a jinja template missing which prevented the css from working.
-2. This issue is now resolved. I decided to add a toast message to confirm to the user that the contact form message had been successfully sent. 
+2. This issue is now resolved. I decided to add a toast message to confirm to the user that the contact form message had been successfully sent.
+3. This issue was fixed by analysing the page in dev tools and locating the row causing the issue. I then added a container-fluid around the row and that resolved it. 
+4. This is not really an issue at the time of submission as the site's pagination is working as expected but I wanted to log it here in case it causes problems in the future.  
 
 
 ### **Code Validators:**

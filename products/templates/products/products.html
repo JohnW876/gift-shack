@@ -58,6 +58,7 @@
     
 <!-- Pagination code modified from https://pypi.org/project/django-pagination-bootstrap/2.4.1/-->     
 {% autopaginate products 12 %}
+    <div class="container-fluid">
          <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
@@ -103,7 +104,7 @@
             </div>
             <hr class="w-50 mb-2">
         </div>
-    
+    </div>
 {% paginate %}    
 {% endblock %}
 
