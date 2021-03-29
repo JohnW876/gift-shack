@@ -18,14 +18,14 @@
         </div>
     </div>
 </header>
-<div class="container mb-5">
+<div class="container center mb-5">
     <div class="row">
         <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
+        <div class="col-sm-12 col-md-8 mt-3 center text-center">
             {% for post in post_list %}
             <div class="card mb-4">
                 {% if post.image %}
-                <img class="img-responsive" src="{{ post.image.url }}" style="width:25%" alt="{{ post.title }}">
+                <img class="img-responsive blog-image" src="{{ post.image.url }}" style="width:60%" alt="{{ post.title }}">
                 {% endif %}
                 <div class="card-body shadow">
                     <h3 class="card-title">{{ post.title }}</h3>
