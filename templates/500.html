@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container mb-5">
+        <div class="row">
+            <div class="col text-center">
+                <hr>
+                <h2 class="mb-4 page-title">500 - Internal Server Error!</h2>
+                <hr>
+            </div>
+        </div>
+</div>
+<div class="container mb-5">
+	<div class="row">
+        <div class="col-12">
+            
+            <h4 class="text-center mb-4">The server was unable to complete the request.</h4>
+            <p class="text-center">
+                Sorry for the inconvenience! You can click below to go back to the homepage. 
+            </p>
+                <a class="btn btn-dark btn-lg border-0 shadow mt-5" href="{% url 'home' %}" role="button"><i class="fas fa-hand-point-left"></i> Back to the Homepage</a>            
+        </div>    
+    </div>
+</div>    
+{% endblock %}
