@@ -354,7 +354,7 @@ The above tests were carried out and no errors were found.
 
     iv. Now submit a valid form to verify that a new screen appears asking you to verify your email address and toast alert message appears re email confirmation.
 
-    v. After confirming email in admin as superuser, navigate to login page and attempt to login using credentials to verify the success toast message appears to say successfully signed in.
+    v. After confirming email, navigate to login page and attempt to login using credentials to verify the success toast message appears to say successfully signed in.
 
 The above tests were carried out and no errors were found. 
 
@@ -377,34 +377,99 @@ The above tests were carried out and no errors were found.
 
     viii. Click the quantity selector buttons to verify the quantity increases and decreases accordingly. 
 
-    ix. Click the add to bag button to verify that the success toast message appears and the shopping bag icon updates to the correct amount. 
+The above tests were carried out and no errors were found. 
 
-    x. Now click the shopping bag icon to verify the shopping bag page appears. 
 
-    xi. Click the quantity buttons to verify the amount increases and decreases. Now click update to verify the totals update accordingly and the success toast appears. 
+**5. Shopping bag**      
 
-    xii. Click secure checkout button to verify you arrive at the checkout page. 
+    i. Click the add to bag button to verify that the success toast message appears and the shopping bag icon updates to the correct amount. 
 
-    xiii. Try to submit an empty form to verify if tooltips appear to ask you to fill in the form.
+    ii. Now click the shopping bag icon to verify the shopping bag page appears. 
 
-    xiv. Now submit a valid form with test card payment of alternate 4 and 2 numbers from left to right to verify the loading spinner appears and you arrive at the order confirmation page with toast message confirming the order.
+    iii. Click the quantity buttons to verify the amount increases and decreases. Now click update to verify the totals update accordingly and the success toast appears. 
 
-    xv. Now click the back to home button to verify you arrive back at the home page.  
+The above tests were carried out and no errors were found. 
+
+
+**6. Checkout**    
+
+    iv. From the shopping bag click the secure checkout button to verify you arrive at the checkout page. 
+
+    x. Try to submit an empty form to verify if tooltips appear to ask you to fill in the form.
+
+    vi. Now submit a valid form with test card payment of alternate 4 and 2 numbers from left to right to verify the loading spinner appears and you arrive at the order confirmation page with toast message confirming the order.
+
+    vii. Now click the back to home button to verify you arrive back at the home page.  
 
     The above tests were carried out and one error was found. The loading spinner did not display during the checkout process. See issues and fixes below. 
 
- **4. Contact page**    
+
+ **7. Contact page**    
 
     i. Navigate to the contact page and try to submit an empty form to verify the tooltip will appear to ask you to fill in the form. 
 
-    ii. Now fill in a valid form and try to submit to verify you arrive at the successfuly submitted page. 
+    ii. Now fill in a valid form and try to submit to verify you arrive at the success page. 
 
-The above tests were carried out and one error was found. The user did not arrive at the success page but was redirected straight to home page. 
-
-
+The above tests were carried out and one error was found. The user did not arrive at the success page but was redirected straight to home page. See issues and fixes below. 
 
 
+**8. Blog posts, details and comments** 
 
+    i. Navigate to the BLOG page via the main site nav to verify the user arrives on the blog posts page listing all current available posts. 
+
+    ii. Hover over the 'Read More' button to verify the background turns black.
+
+    iii. Click the 'Read More button to verify the user arrives at the blog's detail page. 
+
+    iv. Scroll down to verify that comments are listed below and that the leave a comment form is displayed.
+
+    v. Attempt to submit an empty form to verify that the tooltip appears to ask the user to fill in the field. 
+
+    vi. Submit a valid form to verify if the green message appears to inform the user that "Your comment is awaiting moderation". 
+
+The above tests were carried out and no errors were found. 
+
+
+**9. User sign out**
+
+    i. From the My Account icon click and select the Logout option to verify that the user arrives at the Sign Out page. 
+
+    ii. Click the sign out button to verify that the user is returned to the home page and the success toast message is displayed. 
+
+The above tests were carried out and no errors were found. 
+
+
+**10. User Profile Page**
+
+    i. Sign in as a registered user and click the My Account icon followed by the My Profile option to verify the user arrives at the My Profile page. 
+
+    ii. Follow the process above to add a product to the shopping bag, complete all the required details and continue through to a successful checkout.
+
+    iii. Now navigate back to the profile page to verify the default delivery details you submitted are displayed and so is the order in the order history.
+
+
+The above tests were carried out and no errors were found. 
+
+
+**11. Superuser**
+
+    i. Using the provided superuser credentials, login to verify the success toast message appears to confirm you are logged in.
+
+    ii. Click on My Account and selectProduct Management to verify you arrive at the Product Management page with Add a product form. 
+
+    iii. Attempt to submit an empty form to verify that the tooltip appears to ask you to fill in the fields. 
+
+    iv. Submit a valid form without a product image to verify that the success toast message displays and you arrive at the product detail page.
+
+    v. Click the red delete button to verify that the product is deleted and the success toast message appears to confirm this. 
+
+    vi. Navigate to the GIFTS page to verify that Edit and Delete buttons appear for every product.
+
+    vii. Click the edit button to verify that you arrive at the Edit product form with an alert toast message to confirm you are editing. 
+
+    viii. Make some changes to a product and click update to verify that the changes have been made. 
+
+    The above tests were carried out and no errors were found. 
 
 
 
@@ -475,7 +540,8 @@ All interactive elements were tested and found to be working correctly except fo
 2. User did not arrive at the successfully submitted page for the contact form after submitting a valid form. 
 
 ### **Fixes**
-1. 
+1. This issue is now resolved. There was a jinja template missing which prevented the css from working.
+2. This issue is now resolved. I decided to add a toast message to confirm to the user that the contact form message had been successfully sent. 
 
 
 ### **Code Validators:**
