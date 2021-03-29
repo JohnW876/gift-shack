@@ -477,8 +477,7 @@ The above tests were carried out and no errors were found.
 
 **Mobile:**
 
-* 
-  
+*  
 * 
 * 
 * 

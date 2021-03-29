@@ -287,8 +287,85 @@ Information regarding testing can be found in this separate [TESTING.md](https:/
 ---
 ## **Deployment**
 
+Gift Shack was developed with the Gitpod IDE and then pushed to a GitHub repository. The website is deployed via Heroku.
+
+To deploy the website locally starting from GitHub:
+
+**Git Clone**
+
+1. Navigate to the github repository via this link - https://github.com/JohnW876/gift-shack
+2. Click on the green dropdown labelled Code.
+
+![Screenshot Clone Dropdown](/documentation/images/screenshots/green_button.png)
+
+3. The box will display as below.
+
+![Screenshot Clone Dropdown](/documentation/images/screenshots/clone.png)
+
+4. Copy the URL in the box to clone with HTTPS.
+
+5. Open your preferred IDE (Integrated development environment).
+
+6. Change the working directory to the location you want the cloned directory to be made.
+
+7. Type git clone and paste the URL from step 4.
+
+8. Press enter to create your local clone. 
+
+9. In your IDE ensure your environment variables contain the following which can be obtained from a [Stripe](https://stripe.com/gb) account:
+
+![env.py file](/documentation/images/screenshots/env_var.png)
+
+10. Type the following command in the terminal: pip3 install -r requirements.txt
+
+11. Finally, migrate using the command -  python3 manage.py migrate
 
 
+**Deploy to Heroku**
+1. Install gunicorn, psycop2-binary and dj-database-url using pip3 install.
+
+2. Type the folowing command in the terminal to freeze these in to requirements file - **pip3 freeze > requirements.txt**
+
+3. Now create a Procfile and add -  **web: gunicorn gift_shack.wsgi:application**
+
+4. Add and commit the requirements file and Procfile and then git push to GitHub.
+
+5. Now go to [Heroku](https://id.heroku.com/login) and log in.
+
+6. From your dashboard in Heroku, click on the 'New' button as shown below and select Create new app.
+
+![Heroku New Button](/documentation/images/screenshots/new_app.png)
+
+7. Give the app a name, select your region and then click create app.
+
+![Heroku Create App](/documentation/images/screenshots/create_app.png)
+
+8. From the dashboard of the new app, under the Deploy tab, next to Deployment Method, select Github - Connnect to Github.
+
+![Heroku Deploy](/documentation/images/screenshots/method.png)
+
+9. Below in the Connect To Github section, search for the correct repository and then connect.
+
+10. In the dashboard of the app under 'Settings', click  'Reveal Config Vars'
+
+11. Input the same values in Heroku Config Vars as those stored in environment variables.
+
+![Config Vars](/documentation/images/screenshots/config_vars.png)
+
+12. In the 'Deploy' tab choose a branch to deploy and click 'Enable Automatic Deploys' Once enabled, it will look like this:
+
+![Enabled Automatic Deploys](/documentation/images/screenshots/enabled.png)
+
+13. In the Resources tab of the app search for Heroku Postgres in the add-ons section and submit the resulting order form to add Postgres to the app.
+
+![Enabled Automatic Deploys](/documentation/images/screenshots/postgres.png)
+
+14. Click open app at the top of the page to view the newly deployed app. 
+
+![Enabled Automatic Deploys](/documentation/images/screenshots/open_app.png)
+
+
+AWS 
 ---
 
 ## **Credits**
