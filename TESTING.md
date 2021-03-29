@@ -306,21 +306,107 @@ These user's needs are met via:
 ### **Interactivity Tests**
 The following tests were carried out on mobile, tablet and desktop devices to confirm that all interactive parts of the site are working as expected:
 
-**1. Main navigation links**
+**1. Homepage**
 
-	i.  
+	i.  On the homepage move the mouse pointer over each of the main nav links to verify that the white type turns to black.
 
-    ii. 
+    ii. Click in the search bar to verify that the border lights up blue. 
 
-	iii. 
+	iii. Hover over the search button to verify the background colour turns black and the icon remains white.
         
-	iv. 
+	iv. In the search bar itself, type a keyword such as 'tea' and click the search button to verify that relevant search results are returned.
 
-    v. 
+    v. From the main call out on the homepage, roll the mouse pointer over the Browse Gifts button to verify that the background colour turns black.
 
-    vi. 
+    vi. Click the browse gifts button on the home page to verify the browser navigates to the GIFTS page.
+
+    vii. Click the HOME button to verify the browser navigates to the home page again and verify that the animation on the carousel is triggered.
+
+    viii. Roll the mouse pointer over the carousel to verify that the animation is triggered and causes the image to spin.
+
+    ix. Without registering for an account, click the My Account icon to verify the dropdown menu is displayed with Register and Login options.
+
+    x. Click each of these menu items in turn to verify you are taken to the signup and login pages respectively before returning to the home page via the HOME nav link.
+
+    xi. Click on the remaining main nav links to verify the browser navigates to the appropriate page. 
+
+    xii. From any of these main pages click the GIFT SHACK logo to verify that the browser navigates back to the homepage. 
  
 The above tests were carried out and no errors were found. 
+
+
+**2. Footer**
+
+    i. In the footer, move the mouse pointer over the social icons and blog post links to verify they turn blue.
+
+    ii. Hover over the CONTACT US link to verify the white underline appears.
+
+The above tests were carried out and no errors were found.     
+
+
+ **3. Sign up form**  
+
+    i. From the My Account icon, click the register option to verify the sign up form appears. 
+
+    ii. Scroll over the buttons to verify the backgound colour turns black.
+
+    iii. Try to submit an empty form to verify the tooltip appears asking the user to please fill in this field.
+
+    iv. Now submit a valid form to verify that a new screen appears asking you to verify your email address and toast alert message appears re email confirmation.
+
+    v. After confirming email in admin as superuser, navigate to login page and attempt to login using credentials to verify the success toast message appears to say successfully signed in.
+
+The above tests were carried out and no errors were found. 
+
+
+**4. Products page**  
+
+    i. Navigate to the GIFTS page to verify all products are displayed with paginated pages of 12 products maximum per page. 
+
+    ii. Click on the pagination page numbers to verify the browser navigates to each page of remaining products. 
+
+    iii. Hover over the Gift categories dropdown button to verify the background colour turns black.
+
+    iv. Now click the categories dropdown and click each of the categories in turn to verify the correct products are displayed with heading displaying number of products. 
+
+    v. Select all gifts from the category selector. Now click on the sort selector button and select each of the options in turn to verify that the correct order of products is displayed.
+
+    vi. Select an individal product by clicking on it to verify the product detail page is diplayed. 
+
+    vii. On this page, hover over the buttons to verify the background colour turn black.
+
+    viii. Click the quantity selector buttons to verify the quantity increases and decreases accordingly. 
+
+    ix. Click the add to bag button to verify that the success toast message appears and the shopping bag icon updates to the correct amount. 
+
+    x. Now click the shopping bag icon to verify the shopping bag page appears. 
+
+    xi. Click the quantity buttons to verify the amount increases and decreases. Now click update to verify the totals update accordingly and the success toast appears. 
+
+    xii. Click secure checkout button to verify you arrive at the checkout page. 
+
+    xiii. Try to submit an empty form to verify if tooltips appear to ask you to fill in the form.
+
+    xiv. Now submit a valid form with test card payment of alternate 4 and 2 numbers from left to right to verify the loading spinner appears and you arrive at the order confirmation page with toast message confirming the order.
+
+    xv. Now click the back to home button to verify you arrive back at the home page.  
+
+    The above tests were carried out and one error was found. The loading spinner did not display during the checkout process. See issues and fixes below. 
+
+ **4. Contact page**    
+
+    i. Navigate to the contact page and try to submit an empty form to verify the tooltip will appear to ask you to fill in the form. 
+
+    ii. Now fill in a valid form and try to submit to verify you arrive at the successfuly submitted page. 
+
+The above tests were carried out and one error was found. The user did not arrive at the success page but was redirected straight to home page. 
+
+
+
+
+
+
+
 
 ## **Responsiveness**
 
@@ -385,7 +471,8 @@ The website displayed well on all of the above browsers and devices.
 All interactive elements were tested and found to be working correctly except for the issues detailed below.
 
 ### **Issues**
-1. 
+1. The loading spinner did not display during the checkout process.
+2. User did not arrive at the successfully submitted page for the contact form after submitting a valid form. 
 
 ### **Fixes**
 1. 
