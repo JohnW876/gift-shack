@@ -473,45 +473,13 @@ The above tests were carried out and no errors were found.
 
 
 
-## **Responsiveness**
-
-**Mobile:**
-
-*  
-* 
-* 
-* 
-* 
-* 
-* 
-
-**Tablets:**
-
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-
-**Desktop:**
-
-* 
-* 
-* 
-* 
-* 
-* 
-
-
 ## **Device Testing**
 
 The website was tested on the following devices:
 
 ### **Mobile**
 
-* Apple iPhone XR using Safari on IOS 14.3
+* Apple iPhone XR using Safari on IOS 14.4.1
 * Apple iPhone 7 using Safari on IOS 11.3.1
 * Apple iPhone 8 using Safari on IOS 13.4
 * Motorola Moto E5 using Google Chrome on Android 8.1
@@ -527,9 +495,9 @@ The website was tested on the following devices:
 
 The website was tested on the following browsers on Apple iMac running OS Catalina 10.15.7 :
 
-* Google Chrome - VVersion 87.0.4280.88 (Official Build) (x86_64)
+* Google Chrome - Version 89.0.4389.90 (Official Build) (x86_64)
 * Apple Safari - Version 14.0 (15610.1.28.1.9, 15610)
-* Mozilla Firefox Version 78.0.1 (64-bit)
+* Mozilla Firefox Version 87.0 (64-bit)
 
 The website displayed well on all of the above browsers and devices. 
 All interactive elements were tested and found to be working correctly except for the issues detailed below.
