@@ -1,9 +1,9 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 {% load static %}
 
 <!--Blog code modified from https://djangocentral.com/building-a-blog-application-with-django/-->
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'blog/css/posts.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/posts.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -25,7 +25,8 @@
             {% for post in post_list %}
             <div class="card mb-4">
                 {% if post.image %}
-                <img class="img-responsive blog-image" src="{{ post.image.url }}" style="width:60%" alt="{{ post.title }}">
+                <img class="img-responsive blog-image" src="{{ post.image.url }}" style="width:60%"
+                    alt="{{ post.title }}">
                 {% endif %}
                 <div class="card-body shadow">
                     <h3 class="card-title">{{ post.title }}</h3>
@@ -36,7 +37,7 @@
             </div>
             {% endfor %}
         </div>
-       
+
     </div>
 </div>
 {% endblock %}

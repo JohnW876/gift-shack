@@ -34,6 +34,5 @@ def contact(request):
             messages.success(request, f'Contact message successfully sent! Thank you, we will be in touch shortly')
             return redirect ('home')
 
-
     form = ContactForm()
-    return render(request, 'home/contact.html', {'form':form})
+    return render(request, 'home/contact.html', {'form': form})

@@ -5,137 +5,147 @@
 
 <!--Code below modified from code institute Boutique Ado mini project-->
 {% block content %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <div class="col text-center mt-3">
-                    <hr class="w-50 mb-4">
-                    <h2 class="page-title mb-3">Gifts</h2>
-                </div>
-                <ul class="nav justify-content-center">
-                    <li class="nav-item p-3">
-                        <div class="sort-select-wrapper w-100">
-                            <select id="sort-selector" class="custom-select custom-select border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li class="nav-item p-3">
-                        <button class="btn btn-dark border-0 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Gift Categories
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="{% url 'products' %}?category=greetings_cards,tshirts,tea_cups,coffee_mugs,notebooks">All Gifts</a>
-                            <a class="dropdown-item" href="{% url 'products' %}?category=greetings_cards">Greetings Cards</a>
-                            <a class="dropdown-item" href="{% url 'products' %}?category=tshirts">T-shirts</a>
-                            <a class="dropdown-item" href="{% url 'products' %}?category=tea_cups">Tea Cups</a>
-                            <a class="dropdown-item" href="{% url 'products' %}?category=coffee_mugs">Coffee Mugs</a>
-                            <a class="dropdown-item" href="{% url 'products' %}?category=notebooks">Notebooks</a>
-                        </div>
-                    </li>
-                </ul>
-                <div class="row">
-                    <div class="col-12">
-                            <p class="text-muted mt-3 text-center">
-                                {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                    <span class="small"><a href="{% url 'products' %}">Gifts Home</a> | </span>
-                                {% endif %}
-                                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                            </p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="col text-center mt-3">
+                <hr class="w-50 mb-4">
+                <h2 class="page-title mb-3">Gifts</h2>
+            </div>
+            <ul class="nav justify-content-center">
+                <li class="nav-item p-3">
+                    <div class="sort-select-wrapper w-100">
+                        <select id="sort-selector"
+                            class="custom-select custom-select border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price(low to high)</option>
+                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price(high to low)</option>
+                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name(A-Z)</option>
+                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name(Z-A)</option>
+                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                        </select>
                     </div>
-                </div>    
+                </li>
+                <li class="nav-item p-3">
+                    <button class="btn btn-dark border-0 dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Gift Categories
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item"
+                            href="{% url 'products' %}?category=greetings_cards,tshirts,tea_cups,coffee_mugs,notebooks">All
+                            Gifts</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=greetings_cards">Greetings
+                            Cards</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=tshirts">T-shirts</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=tea_cups">Tea Cups</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=coffee_mugs">Coffee Mugs</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=notebooks">Notebooks</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-muted mt-3 text-center">
+                        {% if search_term or current_categories or current_sorting != 'None_None' %}
+                        <span class="small"><a href="{% url 'products' %}">Gifts Home</a> | </span>
+                        {% endif %}
+                        {{ products|length }} Products{% if search_term %} found for
+                        <strong>"{{ search_term }}"</strong>{% endif %}
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    
-<!-- Pagination code modified from https://pypi.org/project/django-pagination-bootstrap/2.4.1/-->     
+</div>
+
+<!-- Pagination code modified from https://pypi.org/project/django-pagination-bootstrap/2.4.1/-->
 {% autopaginate products 12 %}
-    <div class="container-fluid">
-         <div class="row">
-            <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
-                <div class="row">
-                   
-                    {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no_image.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}</p>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left mb-5">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                                            {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating</small>
-                                            {% endif %}
-                                            {% if request.user.is_superuser %}
-                                                <small class="ml-5">
-                                                    <a class="btn-secondary btn-sm mr-2" href="{% url 'edit_product' product.id %}" role="button">Edit</a>
-                                                    <a class="btn-danger btn-sm" href="{% url 'delete_product' product.id %}" role="button">Delete</a>
-                                                </small>
-                                            {% endif %}
-                                        </div>
-                                    </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+            <div class="row mt-1 mb-2"></div>
+            <div class="row">
+
+                {% for product in products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 border-0">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no_image.png"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ product.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left mb-5">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                    {% if product.rating %}
+                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                        5</small>
+                                    {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-5">
+                                        <a class="btn-secondary btn-sm mr-2" href="{% url 'edit_product' product.id %}"
+                                            role="button">Edit</a>
+                                        <a class="btn-danger btn-sm" href="{% url 'delete_product' product.id %}"
+                                            role="button">Delete</a>
+                                    </small>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            <hr class="w-50 mb-2">
         </div>
+        <hr class="w-50 mb-2">
     </div>
-{% paginate %}    
+</div>
+{% paginate %}
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
-    
-    <script type="text/javascript">
-        $('#sort-selector').change(function() {
-            var selector = $(this);
-            var currentUrl = new URL(window.location);
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
 
-            var selectedVal = selector.val();
-            if(selectedVal != "reset"){
-                var sort = selectedVal.split("_")[0];
-                var direction = selectedVal.split("_")[1];
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
 
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
+        var selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
 
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
 
-                window.location.replace(currentUrl);
-            }
-        })
-    </script>
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 {% endblock %}
