@@ -237,7 +237,7 @@ The following project features were included to meet the needs outlined in the u
 * Products page featuring sort functionality by price, rating, product name and product category.
 * Pagination feature which limits the individual products on a given page to a maximum of 12 and provides links to navigate through the remaining products.
 * Product detail page which displays product images and descriptions, quantity changer buttons and links to add products to the shopping bag or keep shopping.
-* Shoppping bag with details of products added as well as subtotal, grand total and quantity buttons with update or remove from bag functions. Also features links to checkout or keeep shopping.
+* Shopping bag with details of products added as well as subtotal, grand total and quantity buttons with update or remove from bag functions. Also features links to checkout or keeep shopping.
 * Shopping bag notification of amount required to meet the free delivery threshold. 
 * Secure checkout with order summary and forms to gather customer details, delivery information and card payments using Stripe. Links to create an account or login are here also with links back to adjust the shopping bag or to complete the order.
 * Order confirmation page featuring order and delivery details. Email confirmation sent to customers automatically following successful checkout. 
@@ -246,7 +246,7 @@ The following project features were included to meet the needs outlined in the u
 * Superuser Product Management page with form to add new products and product images.
 * Superuser Product Management page with form to edit products and product images.
 * Superuser access to edit and delete products from the site via the products pages. 
-* Blog page featuring posts and click through button to see each post in more detail. Posts can only be written by superuser. 
+* Blog page featuring posts and click through button to see each post in more detail.
 * Blog comments section on blog detail pages with submission form for site visitors.
 * Contact page featuring contact form with email validation. 
  
@@ -448,7 +448,7 @@ Code for the project was used from the following sources:
 
 ![Django Pagination Bootstrap](https://pypi.org/project/django-pagination-bootstrap/2.4.1/) - Installed older version of pagination from here as new version not supported by Heroku
 
-![Ani Collection](http://anicollection.github.io/#/flippers/flipInX) - Animated homepage carousel code from
+![Ani Collection](http://anicollection.github.io/#/flippers/flipInX) - Animated homepage carousel code from here.
 
 ---
 ### **Acknowledgements**

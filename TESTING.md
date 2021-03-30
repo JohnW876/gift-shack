@@ -371,7 +371,7 @@ The above tests were carried out and no errors were found.
 
     v. Select all gifts from the category selector. Now click on the sort selector button and select each of the options in turn to verify that the correct order of products is displayed.
 
-    vi. Select an individal product by clicking on it to verify the product detail page is diplayed. 
+    vi. Select an individal product by clicking on it to verify the product detail page is displayed. 
 
     vii. On this page, hover over the buttons to verify the background colour turn black.
 
@@ -528,8 +528,7 @@ This resolved the issue with Heroku and the paginator works however I get a recu
 
 ### **Code Validators:**
 
-The following websites were used to validate the code and there were no errors except for a single line indentation in python code that was easily fixed:
-A few warnings were displayed with the html validator but these related to Jinja templating being in the code as it was unexpected. There were no errors in the html itself. 
+The following websites were used to validate the code and any warning or errors resolved:
 
 HTML - [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input)
 
