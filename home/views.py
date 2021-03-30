@@ -22,20 +22,26 @@ def contact(request):
             # enquiry using the details below
             subject = "Website Inquiry"
             body = {
-            'first_name': form.cleaned_data['first_name'],
-            'last_name': form.cleaned_data['last_name'], 
-            'email': form.cleaned_data['email_address'], 
-            'message':form.cleaned_data['message'], 
+                'first_name': form.cleaned_data['first_name'],
+                'last_name': form.cleaned_data['last_name'],
+                'email': form.cleaned_data['email_address'],
+                'message': form.cleaned_data['message'],
             }
             message = "\n".join(body.values())
 
             try:
-                send_mail(subject, message, 'giftshack@example.com', ['giftshack@example.com'])
+                send_mail(
+                    subject,
+                    message,
+                    'giftshack@example.com',
+                    ['giftshack@example.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             # Notify user of successful submission with toast message
-            messages.success(request, f'Contact message successfully sent! Thank you, we will be in touch shortly')
-            return redirect ('home')
+            messages.success(
+                request,
+                f'Contact message successfully sent! Thank you, we will be in touch shortly')
+            return redirect('home')
 
     form = ContactForm()
     return render(request, 'home/contact.html', {'form': form})
