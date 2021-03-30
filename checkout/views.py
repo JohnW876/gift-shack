@@ -18,8 +18,10 @@ import json
 @require_POST
 def cache_checkout_data(request):
     try:
+        # Store the client secret in the pid variable
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
+        # Set up secret key so as to modify payment intent with metadata
         stripe.PaymentIntent.modify(pid, metadata={
             'bag': json.dumps(request.session.get('bag', {})),
             'save_info': request.POST.get('save_info'),
@@ -35,10 +37,10 @@ def cache_checkout_data(request):
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-
+    # Check if the form is POST
     if request.method == 'POST':
         bag = request.session.get('bag', {})
-
+        # Compile the order form data below in a dictionary
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -50,6 +52,7 @@ def checkout(request):
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
         }
+        # Create an instance of the form using dictionary and save if valid
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
@@ -57,9 +60,12 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.save()
+            # Get the product id from the shopping bag
             for item_id, item_data in bag.items():
+                # Iterate through bag to create order line items
                 try:
                     product = Product.objects.get(id=item_id)
+                    # If an integer then item has no sizes
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
@@ -68,6 +74,7 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
+                        # Otherwise item has sizes so create a line item
                         for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
@@ -77,10 +84,12 @@ def checkout(request):
                             )
                             order_line_item.save()
                 except Product.DoesNotExist:
+                    # If product not in database, issue an error message
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "
                         "Please call us for assistance!")
                     )
+                    # then delete the empty order and return user to Shopping Bag
                     order.delete()
                     return redirect(reverse('view_bag'))
 
@@ -99,6 +108,7 @@ def checkout(request):
         total = current_bag['grand_total']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
+        # Set the payment intent
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
@@ -136,12 +146,15 @@ def checkout(request):
 
     return render(request, template, context)
 
+
 @login_required
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    Will take the order number and render a success page to
+    inform the user that checkout has been a success
     """
     save_info = request.session.get('save_info')
+    # Check if user wants to save their information
     order = get_object_or_404(Order, order_number=order_number)
 
     profile = UserProfile.objects.get(user=request.user)
@@ -167,7 +180,7 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
-
+    # Delete the user's shopping bag from the session
     if 'bag' in request.session:
         del request.session['bag']
 

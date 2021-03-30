@@ -64,6 +64,7 @@ form.addEventListener('submit', function(ev) {
     var url = '/checkout/cache_checkout_data/';
 
     $.post(url, postData).done(function () {
+        // Method used to send card information to Stripe
         stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: card,
