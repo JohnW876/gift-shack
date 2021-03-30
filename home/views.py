@@ -9,7 +9,7 @@ from django.contrib import messages
 
 
 def index(request):
-    """ A view to return the index page """
+    # View to return the index page
 
     return render(request, 'home/index.html')
 
@@ -18,7 +18,9 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = "Website Inquiry" 
+            # If the contact form is valid send an
+            # enquiry using the details below
+            subject = "Website Inquiry"
             body = {
             'first_name': form.cleaned_data['first_name'],
             'last_name': form.cleaned_data['last_name'], 
@@ -31,6 +33,7 @@ def contact(request):
                 send_mail(subject, message, 'giftshack@example.com', ['giftshack@example.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
+            # Notify user of successful submission with toast message
             messages.success(request, f'Contact message successfully sent! Thank you, we will be in touch shortly')
             return redirect ('home')
 
