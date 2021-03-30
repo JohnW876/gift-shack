@@ -302,7 +302,7 @@ These user's needs are met via:
 
 ![Blog comments](documentation/images/screenshots/comments.png)
 
-
+---
 ### **Interactivity Tests**
 The following tests were carried out on mobile, tablet and desktop devices to confirm that all interactive parts of the site are working as expected:
 
@@ -471,7 +471,7 @@ The above tests were carried out and no errors were found.
 
     The above tests were carried out and no errors were found. 
 
-
+---
 
 ## **Device Testing**
 
@@ -500,9 +500,13 @@ The website was tested on the following browsers on Apple iMac running OS Catali
 * Mozilla Firefox Version 87.0 (64-bit)
 
 The website displayed well on all of the above browsers and devices. 
-All interactive elements were tested and found to be working correctly except for the issues detailed below.
+
+---
 
 ### **Issues**
+
+All areas of the site were tested and found to be working correctly except for the issues detailed below.
+
 1. The loading spinner did not display during the checkout process.
 2. User did not arrive at the successfully submitted page for the contact form after submitting a valid form. 
 3. There was a problem with horizontal scrolling on the GIFTS page which displays the products. 
