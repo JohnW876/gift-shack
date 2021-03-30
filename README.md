@@ -294,6 +294,7 @@ To deploy the website locally starting from GitHub:
 **Git Clone**
 
 1. Navigate to the github repository via this link - https://github.com/JohnW876/gift-shack
+
 2. Click on the green dropdown labelled Code.
 
 ![Screenshot Clone Dropdown](/documentation/images/screenshots/green_button.png)
@@ -367,14 +368,58 @@ To deploy the website locally starting from GitHub:
 
 AWS 
 ---
+Amazon Web Services or AWS is used to store all of the deployed site's static and media files. 
+
+1. Create a new account and an S3 bucket and upload all of the static and media files. Details of how to create a new bucket can be found ![here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html)
+
+2. Importantly, the bucket needs to be configured to allow public access to your files so uncheck the box for block all public access. 
+
+3. On the new bucket on the properties tab, turn on static webhosting to generate a new endpoint and save.
+
+4. Now enter the CORS (Cross-origin resource sharing) configuration as shown below to set up access to the bucket from Heroku. 
+
+![CORS](/documentation/images/screenshots/cors_1.png)
+
+5. Note down the ARN (Amazon Resource Name)
+
+6. Go to the bucket policy tab and using the policy generator as shown below generate a policy with an action of get object. 
+
+![Policy Generator](/documentation/images/screenshots/policy_gen.png)
+
+
+7. Paste the ARN in, generate the policy and copy it into the policy editor. 
+
+8. Allow access to all resources in the bucket again. 
+
+9. Back in the Amazon Services page search for IAM (Identity and Access Management) and navigate to it. 
+
+10. From here, using the section headings in the dashboard, create a new group, generate an access policy for the bucket and assign a user to the new group so that they can access all the files. 
+
+11. This process generates a csv file to download that contains the user's access key and the secret access key which should be added to the Heroku Config Vars and your IDE environment variables. 
+
+![AWS Keys](/documentation/images/screenshots/aws_keys.png)
+
+12. In the IDE now run the command **pip3 install boto3** and **pip3 install django-storages** and freeze them into the requirements file using the command **pip3 freeze > requirements.txt**
+
+13. In Settings.py add 'storages' to INSTALLED_APPS
+
+14. Add the following in settings.py
+
+![Settings](/documentation/images/screenshots/settings.png)
+
+15. Now create a custom_storages.py file in the root directory and ad code as shown below.
+
+![Custom Storages](/documentation/images/screenshots/custom_storages.png)
+
+16. Finally, commit the changes and push to Github which will automatically push to Heroku.
+
+
+---
 
 ## **Credits**
 
-### **Content**
-All site content was written by John Withey.
-
-### **Media**
-All images used in this project were created by John Withey. 
+### **Content & Media**
+All site content and images used were created by John Withey.
 
 ### **Code**
 Code for the project was used from the following sources:

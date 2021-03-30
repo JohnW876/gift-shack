@@ -488,7 +488,7 @@ The website was tested on the following devices:
 
 ### **Tablets**
 
-* Apple iPad Air 2 using Safari on IOS 13.5.1
+* Apple iPad 2 using Safari on IOS 14.4.1
 * Microsoft Surface Pro on Windows 10 Pro (Tested on Microsoft Edge & Google Chrome)
 
 ### **Desktop** 
